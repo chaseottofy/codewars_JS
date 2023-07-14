@@ -1,5 +1,11 @@
-/* 6 kyu
-Parse HTML/CSS Colors} */
+// 6 KYU
+// LIST AT BOTTOM OF FILE
+
+/*****************************
+1.) Parse HTML/CSS Colors
+solved: 7/11/2023
+codewars.com/kata/58b57ae2724e3c63df000006
+*****************************/
 function parseHTMLColor(color) {
   if (color[0] !== '#') {
     color = PRESET_COLORS[color.toLowerCase()]
@@ -15,8 +21,11 @@ function parseHTMLColor(color) {
   } : null;
 }
 
-/* 6 kyu
-Extract the contents of a given tag from the HTML document} */
+/*****************************
+2.) Extract the contents of a given tag from the HTML document
+solved: 7/11/2023
+codewars.com/kata/5808ce703e55743db7000d92
+*****************************/
 function getTagContent(html, tag, count = 0) {
   if (!html.includes(`</${tag}>`)) return [];
 
@@ -37,8 +46,11 @@ function getTagContent(html, tag, count = 0) {
   }
 }
 
-/* 6 kyu
-Palindrome for your Dome} */
+/*****************************
+3.) Palindrome for your Dome
+solved: 7/11/2023
+codewars.com/kata/53046ceefe87e4905e00072a
+*****************************/
 function palindrome(s) {
   s = s.toLowerCase().replace(/[^a-z0-9]/gi, '');
   if (!s) return true;
@@ -48,8 +60,11 @@ function palindrome(s) {
   return true;
 }
 
-/* 6 kyu
-PatternCraft - Strategy} */
+/*****************************
+4.) PatternCraft - Strategy
+solved: 7/11/2023
+codewars.com/kata/5682e809386707366d000024
+*****************************/
 class Fly {
   move(unit) {
     unit.position += 10;
@@ -76,8 +91,11 @@ class Viking {
   }
 }
 
-/* 6 kyu
-PatternCraft - Decorator} */
+/*****************************
+5.) PatternCraft - Decorator
+solved: 7/11/2023
+codewars.com/kata/5682e545fb263ecf7b000069
+*****************************/
 class Marine {
   constructor(_damage, _armor) {
     this._damage = _damage;
@@ -101,8 +119,11 @@ class MarineArmorUpgrade {
   }
 }
 
-/* 6 kyu
-PatternCraft - State} */
+/*****************************
+6.) PatternCraft - State
+solved: 7/11/2023
+codewars.com/kata/5682e72eb7354b2f39000021
+*****************************/
 class SiegeState {
   constructor() {
     this.canMove = false;
@@ -129,8 +150,11 @@ class Tank {
   }
 }
 
-/* 6 kyu
-Binary string} */
+/*****************************
+7.) Binary string
+solved: 7/11/2023
+codewars.com/kata/52654ea8e218b83553000666
+*****************************/
 function toBinaryString(n) {
   if (n === 0 || n === 1) return ""+n
   let r = '';
@@ -142,8 +166,11 @@ function toBinaryString(n) {
 }
 
 
-/* 6 kyu
-Latin Square Validator} */
+/*****************************
+8.) Latin Square Validator
+solved: 7/11/2023
+codewars.com/kata/646254375cee7a000ffaa404
+*****************************/
 function verifyLatinSquare(arr, m) {
   if (arr.find(row => row.length !== arr.length)) { return 'Array not square'; }
   if (arr.length !== m) { return 'Array is wrong size'; }
@@ -171,14 +198,20 @@ function verifyLatinSquare(arr, m) {
   return `Valid latin square of size ${m}`;
 };
 
-/* 6 kyu
-Mad Max: Recursion Road} */
+/*****************************
+9.) Mad Max: Recursion Road
+solved: 7/11/2023
+codewars.com/kata/57bd0abcb9799763f1001bdc
+*****************************/
 function max(a, m = -Infinity) {
   return !a.length ? m : max(a.slice(1), m = a[0] > m ? a[0] : m);
 }
 
-/* 6 kyu
-Numericals of a String} */
+/*****************************
+10.) Numericals of a String
+solved: 7/10/2023
+codewars.com/kata/5b4070144d7d8bbfe7000001
+*****************************/
 function numericals(s) {
   let m = {};
   let str = '';
@@ -189,8 +222,11 @@ function numericals(s) {
   return str;
 }
 
-/* 6 kyu
-Replace letters} */
+/*****************************
+11.) Replace letters
+solved: 7/10/2023
+codewars.com/kata/5a4331b18f27f2b31f000085
+*****************************/
 function replaceLetters(word) {
   let vows = [1, 5, 9, 15, 21];
   const findClosest = (n) => {
@@ -217,8 +253,11 @@ function replaceLetters(word) {
   }).join("");
 }
 
-/* 6 kyu
-Card game} */
+/*****************************
+12.) Card game
+solved: 7/10/2023
+codewars.com/kata/5a3141fe55519e04d90009d8
+*****************************/
 function cardGame(c1, c2, MAGA) {
   if (c1 === c2) return 'Someone cheats.';
   const getW = n => `The ${['first', 'second'][n]} card won.`;
@@ -243,15 +282,21 @@ function cardGame(c1, c2, MAGA) {
   return +n1 > +n2 ? getW(0) : getW(1);
 }
 
-/* 6 kyu
-Break camelCase} */
+/*****************************
+13.) Break camelCase
+solved: 7/9/2023
+codewars.com/kata/5208f99aee097e6552000148
+*****************************/
 function solution(s) {
   return s.split(/(?=[A-Z])/).join(" ")
 }
 
 
-/* 6 kyu
-Simple Encryption #1 - Alternating Split} */
+/*****************************
+14.) Simple Encryption #1 - Alternating Split
+solved: 7/9/2023
+codewars.com/kata/57814d79a56c88e3e0000786
+*****************************/
 function encrypt(text, n) {
   if (!text || n <= 0) return text; 
 
@@ -293,8 +338,11 @@ function decrypt(text, n) {
   return text;
 }
 
-/* 6 kyu
-Keyword Cipher Helper} */
+/*****************************
+15.) Keyword Cipher Helper
+solved: 7/9/2023
+codewars.com/kata/535c1c80cdbf5011e600030f
+*****************************/
 function KeywordCipher(abc, keyword) {
   this.alph = [...new Set(keyword + abc)].join('');
   this.encode = function (str) {
@@ -311,8 +359,11 @@ function KeywordCipher(abc, keyword) {
 }
 
 
-/* 6 kyu
-longest_palindrome} */
+/*****************************
+16.) longest_palindrome
+solved: 7/9/2023
+codewars.com/kata/54bb6f887e5a80180900046b
+*****************************/
 function testPal(s) {
   return [...s].reverse().join('') === s;
 }
@@ -331,20 +382,29 @@ function longestPalindrome(s) {
 }
 
 
-/* 6 kyu
-Valid Phone Number} */
+/*****************************
+17.) Valid Phone Number
+solved: 7/9/2023
+codewars.com/kata/525f47c79f2f25a4db000025
+*****************************/
 function validPhoneNumber(n) {
   return !n.match(/[^0-9() -]/) ? !!~n.indexOf('-') && !!~n.indexOf(' ') : false;
 }
 
-/* 6 kyu
-Sentence Calculator} */
+/*****************************
+18.) Sentence Calculator
+solved: 7/9/2023
+codewars.com/kata/5970fce80ed776b94000008b
+*****************************/
 function lettersToNumbers(s) {
   return [...s.replace(/[^a-zA-Z0-9]/g, '')].reduce((a, c) => a + (isNaN(c) ? (c.toUpperCase() == c ? ((c.charCodeAt() - 64) * 2) : c.charCodeAt() - 96) : +c), 0);
 }
 
-/* 6 kyu
-Cambridge Word Scramble} */
+/*****************************
+19.) Cambridge Word Scramble
+solved: 7/9/2023
+codewars.com/kata/564e48ebaaad20181e000024
+*****************************/
 function mixwords(str) {
   return typeof str == 'string' ? str.split(' ').map(w => {
     if (w.length < 4) return w;
@@ -356,12 +416,18 @@ function mixwords(str) {
 };
 
 
-/* 6 kyu
-Shortest code: Father and Son} */
+/*****************************
+20.) Shortest code: Father and Son
+solved: 7/9/2023
+codewars.com/kata/56f928b19982cc7a14000c9d
+*****************************/
 let sc = s =>[...s].filter((v,_,a) => v==v.toUpperCase()?a.includes(v.toLowerCase()):a.includes(v.toUpperCase())).join('')
 
-/* 6 kyu
-■□ Pattern □■ : Snake} */
+/*****************************
+21.) ■□ Pattern □■ : Snake
+solved: 7/8/2023
+codewars.com/kata/56e2ede2c92c6cb1370012ba
+*****************************/
 function snake(w, h) {
   const chars = ['■', '□', '∷'];
   const chars2 = ['■□', '□■'];
@@ -386,8 +452,11 @@ function snake(w, h) {
   return res.slice(0, -1);
 }
 
-/* 6 kyu
-Simple Fun #23: Square Digits Sequence} */
+/*****************************
+22.) Simple Fun #23: Square Digits Sequence
+solved: 7/8/2023
+codewars.com/kata/5886d65e427c27afeb0000c1
+*****************************/
 function squareDigitsSequence(a0) {
   const red = n => [...String(n)].reduce((a, c) => a + Math.pow(parseInt(c), 2), 0);
   
@@ -400,16 +469,22 @@ function squareDigitsSequence(a0) {
   return seen.length + 1;
 }
 
-/* 6 kyu
-Sort two arrays} */
+/*****************************
+23.) Sort two arrays
+solved: 7/8/2023
+codewars.com/kata/5818c52e21a33314e00000cb
+*****************************/
 function sortArrays(arr1, arr2) {
   let ind2 = Object.keys(arr2).sort((a, b) => arr2[a] < arr2[b] ? -1 : arr2[a] > arr2[b] ? 1 : 0);
   let ind1 = Object.keys(arr1).sort((a, b) => arr1[a] < arr1[b] ? -1 : arr1[a] > arr1[b] ? 1 : 0);
   return [ind2.map((idx) => arr1[+idx]), ind1.map((idx) => arr2[+idx])];
 }
 
-/* 6 kyu
-Join Two Arrays by Id} */
+/*****************************
+24.) Join Two Arrays by Id
+solved: 7/8/2023
+codewars.com/kata/6481c68ffdf80b6147d85248
+*****************************/
 function joinArraysById(arr1, arr2) {
   const map = {};
   for (const e of arr1) {
@@ -421,8 +496,11 @@ function joinArraysById(arr1, arr2) {
   return Object.values(map)
 }
 
-/* 6 kyu
-Find The Parity Outlier} */
+/*****************************
+25.) Find The Parity Outlier
+solved: 7/7/2023
+codewars.com/kata/5526fc09a1bbd946250002dc
+*****************************/
 function findOutlier(int){
   int = int.reduce((a, c, i) => {
     if (c%2) {
@@ -438,8 +516,11 @@ function findOutlier(int){
   return int.ev[0] > int.od[0] ? int.od[1] : int.ev[1];
 }
 
-/* 6 kyu
-Node.js Async I/O} */
+/*****************************
+26.) Node.js Async I/O
+solved: 7/7/2023
+codewars.com/kata/542106e2dda52658bf00001a
+*****************************/
 var exec = require('child_process').exec;
 function execute(command, callback) {
   return exec(command, function(err, data) {
@@ -447,8 +528,11 @@ function execute(command, callback) {
   });
 }
 
-/* 6 kyu
-Caesar Cipher Encryption - Variation} */
+/*****************************
+27.) Caesar Cipher Encryption - Variation
+solved: 7/7/2023
+codewars.com/kata/55ec55323c89fc5fbd000019
+*****************************/
 function caesarEncode(str, num) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
   const regex = new RegExp('[a-z]', 'gi');
@@ -469,8 +553,11 @@ function caesarEncode(str, num) {
 }
 
 
-/* 6 kyu
-Secret Message} */
+/*****************************
+28.) Secret Message
+solved: 7/7/2023
+codewars.com/kata/54808e45ab03a2c8330009fb
+*****************************/
 function findSecretMessage(p) {
   p = p.toLowerCase().split(/[\\.!?]/).map(x => x[0] == ' ' ? x.slice(1) : x);
   let m = {};
@@ -488,8 +575,11 @@ function findSecretMessage(p) {
 }
 
 
-/* 6 kyu
-Find the missing term in an Arithmetic Progression} */
+/*****************************
+29.) Find the missing term in an Arithmetic Progression
+solved: 7/7/2023
+codewars.com/kata/52de553ebb55d1fca3000371
+*****************************/
 var findMissing = function (list) {
   const diff = (list[list.length - 1] - list[0]) / list.length;
 
@@ -501,8 +591,11 @@ var findMissing = function (list) {
   }
 };
 
-/* 6 kyu
-Sum two arrays} */
+/*****************************
+30.) Sum two arrays
+solved: 7/7/2023
+codewars.com/kata/59c3e8c9f5d5e40cab000ca6
+*****************************/
 function addArrays(a, b) {
   if (!a.length) return b;
   if (!b.length) return a;
@@ -516,8 +609,11 @@ function addArrays(a, b) {
   return sign ? res.slice(1) : res;
 }
 
-/* 6 kyu
-Balanced Braces (with non-brace characters)} */
+/*****************************
+31.) Balanced Braces (with non-brace characters)
+solved: 7/6/2023
+codewars.com/kata/5a62173ee626c5f0e40000e9
+*****************************/
 function isBalanced(str) {
   if (!str) return [true, 0, 0];
   str = str.replace(/[^\(\)\[\]\{\}]/g, "");
@@ -546,8 +642,11 @@ function isBalanced(str) {
   return [stack.length === 0, bcount, stack.length];
 }
 
-/* 6 kyu
-Find match row and column position in a given string} */
+/*****************************
+32.) Find match row and column position in a given string
+solved: 7/6/2023
+codewars.com/kata/58fae1eb2bffa7a570000039
+*****************************/
 function findPosition(code, match) {
   let lines = code.split('\n');
   match = match.split('\n');
@@ -575,8 +674,11 @@ function findPosition(code, match) {
   };
 }
 
-/* 6 kyu
-Roman Numerals Encoder} */
+/*****************************
+33.) Roman Numerals Encoder
+solved: 7/6/2023
+codewars.com/kata/51b62bf6a9c58071c600001b
+*****************************/
 function solution(number) {
   const keys = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
   const vals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
@@ -599,8 +701,11 @@ function solution(number) {
   return res + temp;
 }
 
-/* 6 kyu
-Find Grid Position} */
+/*****************************
+34.) Find Grid Position
+solved: 7/6/2023
+codewars.com/kata/580f6cbcfbf2bec47c000511
+*****************************/
 function createGrid(r, c, pos) {
   let curr = '';
   let oth = '';
@@ -621,8 +726,11 @@ function createGrid(r, c, pos) {
   return res.join("\n");
 }
 
-/* 6 kyu
-Factorial length} */
+/*****************************
+35.) Factorial length
+solved: 7/6/2023
+codewars.com/kata/59f34ec5a01431ab7600005a
+*****************************/
 function count(n) {
   let y = 0;
   while (n > 1) {
@@ -632,8 +740,11 @@ function count(n) {
   return Math.ceil(y);
 }
 
-/* 6 kyu
-Add All} */
+/*****************************
+36.) Add All
+solved: 7/6/2023
+codewars.com/kata/5b7d7ce57a0c9d86c700014b
+*****************************/
 function addAll(numbers) {
   if (numbers.length == 1) return 0;
   numbers.sort((a, b) => a - b);
@@ -641,15 +752,21 @@ function addAll(numbers) {
   return numbers[1] + addAll(numbers.slice(1));
 }
 
-/* 6 kyu
-More Zeros than Ones} */
+/*****************************
+37.) More Zeros than Ones
+solved: 7/6/2023
+codewars.com/kata/5d41e16d8bad42002208fe1a
+*****************************/
 function moreZeros(s) {
   const count = str => [...str].filter(n => n === '1').length < (str.length / 2);
   return [...new Set([...s].filter(n => count(n.charCodeAt().toString(2))))];
 }
 
-/* 6 kyu
-What's A Name In?} */
+/*****************************
+38.) What's A Name In?
+solved: 7/6/2023
+codewars.com/kata/59daf400beec9780a9000045
+*****************************/
 function nameInStr(str, name) {
   let i = 0;
   let curr = 0;
@@ -667,8 +784,11 @@ function nameInStr(str, name) {
   return false;
 }
 
-/* 6 kyu
-Valid string} */
+/*****************************
+39.) Valid string
+solved: 7/6/2023
+codewars.com/kata/52f3bb2095d6bfeac2002196
+*****************************/
 var validWord = function (d, w) {
   for (let i = 1; i <= w.length; i++) {
     let curr = w.slice(0, i);
@@ -679,14 +799,20 @@ var validWord = function (d, w) {
   return w.length == 0;
 };
 
-/* 6 kyu
-Brainfuck generator} */
+/*****************************
+40.) Brainfuck generator
+solved: 7/6/2023
+codewars.com/kata/579e646353ba33cce2000093
+*****************************/
 function toBrainfuck(s) {
   return [...s].reduce((a, c) => a + '+'.repeat(c.charCodeAt()) + '.[-]', '');
 }
 
-/* 6 kyu
-Algorithm Fun: Find The Unknown Number - Part II} */
+/*****************************
+41.) Algorithm Fun: Find The Unknown Number - Part II
+solved: 7/4/2023
+codewars.com/kata/59cdb97172851e2824000094
+*****************************/
 function findUnknowNumber(a, b, c, x, y, z) {
   let i = 1;
   while (true) {
@@ -698,15 +824,21 @@ function findUnknowNumber(a, b, c, x, y, z) {
   return i;
 }
 
-/* 6 kyu
-CamelCase to underscore} */
+/*****************************
+42.) CamelCase to underscore
+solved: 7/4/2023
+codewars.com/kata/5b1956a7803388baae00003a
+*****************************/
 const toUnderScore = name => {
   let res = name.replace(/([A-Z]|\d+)/g, "_$1");
   return res.replace(/^[_]/g, "").replace(/__/g, "_");
 };
 
-/* 6 kyu
-Find character} */
+/*****************************
+43.) Find character
+solved: 7/4/2023
+codewars.com/kata/5817030088ca96c0b7000083
+*****************************/
 const alph = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 function findCharacters(m) {
   let d = {};
@@ -724,8 +856,11 @@ function findCharacters(m) {
   return res.sort((a, b) => alph.indexOf(a) - alph.indexOf(b)).join('');
 }
 
-/* 6 kyu
-BitMath: Addition} */
+/*****************************
+44.) BitMath: Addition
+solved: 7/4/2023
+codewars.com/kata/57a6c52a72292d3235000187
+*****************************/
 class BitMath {
   static add(a, b) {
     while (b != 0) {
@@ -737,8 +872,11 @@ class BitMath {
   }
 }
 
-/* 6 kyu
-Making Change} */
+/*****************************
+45.) Making Change
+solved: 7/4/2023
+codewars.com/kata/5365bb5d5d0266cd010009be
+*****************************/
 const makeChange = (amount) => {
   let d = { 'H': 0, 'Q': 0, 'D': 0, 'N': 0, 'P': 0 };
 
@@ -769,8 +907,11 @@ const makeChange = (amount) => {
   return d;
 };
 
-/* 6 kyu
-Make A Window} */
+/*****************************
+46.) Make A Window
+solved: 7/4/2023
+codewars.com/kata/59c03f175fb13337df00002e
+*****************************/
 function makeAWindow(num) {
   const [period, dash] = ['.'.repeat(num), '-'.repeat(num)];
   const panes = Array(num).fill(`|${period}|${period}|`).join('\n');
@@ -779,8 +920,11 @@ function makeAWindow(num) {
   return `${topBottom}\n${panes}\n${mid}\n${panes}\n${topBottom}`;
 }
 
-/* 6 kyu
-A Taste of Curry} */
+/*****************************
+47.) A Taste of Curry
+solved: 7/4/2023
+codewars.com/kata/52d629bb5feccfd4c100022d
+*****************************/
 function curry(fun) {
   const args = [...arguments].slice(1);
   return function () {
@@ -789,8 +933,11 @@ function curry(fun) {
 }
 
 
-/* 6 kyu
-Reducing by rules to get the result} */
+/*****************************
+48.) Reducing by rules to get the result
+solved: 7/3/2023
+codewars.com/kata/585ba6dff59b3cef3f000132
+*****************************/
 function reduceByRules(n, r) {
   return n.reduce((a, b, i) => {
     let cr = (i - 1) % r.length;
@@ -798,8 +945,11 @@ function reduceByRules(n, r) {
   });
 }
 
-/* 6 kyu
-Generating Generators - Generators #3} */
+/*****************************
+49.) Generating Generators - Generators #3
+solved: 7/3/2023
+codewars.com/kata/56390ac2815fb1222a000070
+*****************************/
 function* generator(a, b) {
   function* generator2(a) {
     for (let i = 1; i <= 10; i++) {
@@ -812,8 +962,11 @@ function* generator(a, b) {
   }
 }
 
-/* 6 kyu
-Sequence generator} */
+/*****************************
+50.) Sequence generator
+solved: 7/3/2023
+codewars.com/kata/55eee789637477c94200008e
+*****************************/
 function* sequenceGen(...arguments) {
   while (true) {
     yield arguments[0];
@@ -821,8 +974,11 @@ function* sequenceGen(...arguments) {
   }
 }
 
-/* 6 kyu
-Sort the columns of a csv-file} */
+/*****************************
+51.) Sort the columns of a csv-file
+solved: 7/3/2023
+codewars.com/kata/57f7f71a7b992e699400013f
+*****************************/
 function sortCsvColumns(str) {
   str = str.split('\n').map(r => r.split(';'));
   return Array.from({ length: str.length }, (_, i) => {
@@ -833,8 +989,11 @@ function sortCsvColumns(str) {
 }
 
 
-/* 6 kyu
-Greatest Position Distance Between Matching Array Values} */
+/*****************************
+52.) Greatest Position Distance Between Matching Array Values
+solved: 7/3/2023
+codewars.com/kata/5442e4fc7fc447653a0000d5
+*****************************/
 var greatestDistance = function (data) {
   let m = 0;
   for (let i = 0; i < data.length; i++) {
@@ -845,8 +1004,11 @@ var greatestDistance = function (data) {
 };
 
 
-/* 6 kyu
-Filter out for good!} */
+/*****************************
+53.) Filter out for good!
+solved: 7/3/2023
+codewars.com/kata/56035d75426e197c3e0000a2
+*****************************/
 Array.prototype.remove = function (pred) {
   let arr = [].concat(this);
   let rem = [];
@@ -857,8 +1019,11 @@ Array.prototype.remove = function (pred) {
   return rem;
 };
 
-/* 6 kyu
-String Breakers} */
+/*****************************
+54.) String Breakers
+solved: 7/2/2023
+codewars.com/kata/59d398bb86a6fdf100000031
+*****************************/
 function stringBreakers(n, string){
   let res = [];
   string = string.replace(/\s/g, '');
@@ -868,8 +1033,11 @@ function stringBreakers(n, string){
   return res.join('\n');
 }
 
-/* 6 kyu
-String counting} */
+/*****************************
+55.) String counting
+solved: 7/2/2023
+codewars.com/kata/5cfd36ea4c60c3001884ed42
+*****************************/
 function solve(s) {
   s = [...s].map(v => 90 - v.charCodeAt());
   let res = 0;
@@ -881,8 +1049,11 @@ function solve(s) {
   return res;
 }
 
-/* 6 kyu
-Consecutive Count} */
+/*****************************
+56.) Consecutive Count
+solved: 7/2/2023
+codewars.com/kata/59c3e819d751df54e9000098
+*****************************/
 function getConsectiveItems(items, key) {
   items = items.toString();
   key = key.toString();
@@ -900,8 +1071,11 @@ function getConsectiveItems(items, key) {
   return m;
 }
 
-/* 6 kyu
-Count Repeats} */
+/*****************************
+57.) Count Repeats
+solved: 7/2/2023
+codewars.com/kata/598ee7b6ec6cb90dd6000061
+*****************************/
 function countRepeats(str) {
   let count = 0;
   for (let i = 0; i < str.length; i++) {
@@ -913,8 +1087,11 @@ function countRepeats(str) {
   return count;
 }
 
-/* 6 kyu
-Only Duplicates} */
+/*****************************
+58.) Only Duplicates
+solved: 7/2/2023
+codewars.com/kata/5a1dc4baffe75f270200006b
+*****************************/
 function onlyDuplicates(str) {
   let m = {};
   let res = '';
@@ -930,8 +1107,11 @@ function onlyDuplicates(str) {
   return res;
 }
 
-/* 6 kyu
-Duplicates. Duplicates Everywhere.} */
+/*****************************
+59.) Duplicates. Duplicates Everywhere.
+solved: 7/2/2023
+codewars.com/kata/5e8dd197c122f6001a8637ca
+*****************************/
 const removeDuplicateIds = (obj) => {
   let has = new Set();
   let map = {};
@@ -948,8 +1128,11 @@ const removeDuplicateIds = (obj) => {
   return map;
 };
 
-/* 6 kyu
-Find duplicates in array by properties keys in another array} */
+/*****************************
+60.) Find duplicates in array by properties keys in another array
+solved: 7/2/2023
+codewars.com/kata/58cc070abd22e324b300002a
+*****************************/
 function duplicated(arr, keys) {
   let map = {};
   let temp = [];
@@ -966,20 +1149,29 @@ function duplicated(arr, keys) {
 }
 
 
-/* 6 kyu
-Duplicate Arguments} */
+/*****************************
+61.) Duplicate Arguments
+solved: 7/2/2023
+codewars.com/kata/520d9c27e9940532eb00018e
+*****************************/
 function solution(...arguments){
   return arguments.length !== new Set(arguments).size
 }
 
-/* 6 kyu
-Javascript filter - 2} */
+/*****************************
+62.) Javascript filter - 2
+solved: 7/2/2023
+codewars.com/kata/5262fa26875ed24a3e000029
+*****************************/
 function roomMates(r, f) {
   return r.slice((f - 1) * 6, f * 6).filter(Boolean);
 }
 
-/* 6 kyu
-All Star Code Challenge #15} */
+/*****************************
+63.) All Star Code Challenge #15
+solved: 7/2/2023
+codewars.com/kata/586560a639c5ab3a260000f3
+*****************************/
 function rotate(str) {
   const getRotate = str => {
     let arr = str.split('');
@@ -996,8 +1188,11 @@ function rotate(str) {
 }
 
 
-/* 6 kyu
-Odd-heavy Array} */
+/*****************************
+64.) Odd-heavy Array
+solved: 7/1/2023
+codewars.com/kata/59c7e477dcc40500f50005c7
+*****************************/
 function isOddHeavy(n) {
   if (n.length === 0) return false
   if (n.length === 1) return n[0] % 2 !== 0
@@ -1010,8 +1205,11 @@ function isOddHeavy(n) {
   return Math.min(...odd) > Math.max(...even)
 }
 
-/* 6 kyu
-Count word occurrences} */
+/*****************************
+65.) Count word occurrences
+solved: 7/1/2023
+codewars.com/kata/54fdbad0762e2e8a54000452
+*****************************/
 var wordCounter = function (text) {
   const map = {};
   for (let w of text.split(/[ ,.]+/)) {
@@ -1022,8 +1220,11 @@ var wordCounter = function (text) {
   return { count: w => parseInt(map[w]) || 0 }
 }
 
-/* 6 kyu
-The range() function} */
+/*****************************
+66.) The range() function
+solved: 7/1/2023
+codewars.com/kata/5298961d9ce954d77b0003a6
+*****************************/
 function range() {
   const args = [...arguments];
   const [start, stop, step] = [
@@ -1036,14 +1237,20 @@ function range() {
   return stop > start ? Array.from({ length: getlen }, (_, i) => start + (i * step)) : [];
 }
 
-/* 6 kyu
-Simple Sentences} */
+/*****************************
+67.) Simple Sentences
+solved: 7/1/2023
+codewars.com/kata/5297bf69649be865e6000922
+*****************************/
 function makeSentence(parts) {
   return (parts.reduce((a, c, i) => a + ((c.match(/\w/) && i > 0) ? " " + c : c), '') + ".").replace(/\.+/g, '.');
 }
 
-/* 6 kyu
-Simple Fun #135: Missing Alphabets} */
+/*****************************
+68.) Simple Fun #135: Missing Alphabets
+solved: 7/1/2023
+codewars.com/kata/58a664bb586e986c940001d5
+*****************************/
 function missingAlphabets(s) {
   const alph = 'abcdefghijklmnopqrstuvwxyz';
   const alphCount = {};
@@ -1073,8 +1280,11 @@ function missingAlphabets(s) {
   return result;
 }
 
-/* 6 kyu
-NASA Countdown} */
+/*****************************
+69.) NASA Countdown
+solved: 7/1/2023
+codewars.com/kata/56c4931400165c5283000661
+*****************************/
 function countdown(msec) {
   let sign = msec < 0 ? '-' : '+';
   msec = Math.abs(msec);
@@ -1086,8 +1296,11 @@ function countdown(msec) {
 }
 
 
-/* 6 kyu
-JSON.parse Date Reviver} */
+/*****************************
+70.) JSON.parse Date Reviver
+solved: 7/1/2023
+codewars.com/kata/533b0d5e7abec41550000a9e
+*****************************/
 function JSON_Date_reviver(key, value) {
   let d = Date.parse(value);
   if (typeof value === 'string' && !isNaN(d)) {
@@ -1097,8 +1310,11 @@ function JSON_Date_reviver(key, value) {
   }
 }
 
-/* 6 kyu
-Password generator} */
+/*****************************
+71.) Password generator
+solved: 7/1/2023
+codewars.com/kata/58ade2233c9736b01d0000b3
+*****************************/
 function passwordGen() {
   let check = { lower: false, upper: false, num: false };
   const lc = "abcdefghijklmnopqrstuvwxyz";
@@ -1126,8 +1342,11 @@ function passwordGen() {
   }
 }
 
-/* 6 kyu
-Simple time difference} */
+/*****************************
+72.) Simple time difference
+solved: 7/1/2023
+codewars.com/kata/5b76a34ff71e5de9db0000f2
+*****************************/
 function minTo(minutes) {
   let h = String(Math.floor(minutes / 60)).padStart(2, "0");
   let m = String(minutes % 60).padStart(2, "0");
@@ -1153,8 +1372,11 @@ function solve(arr) {
   return minTo(Math.max(m1, m2) - 1);
 }
 
-/* 6 kyu
-Alphabetized} */
+/*****************************
+73.) Alphabetized
+solved: 7/1/2023
+codewars.com/kata/5970df092ef474680a0000c9
+*****************************/
 function alphabetized(s) {
   return s.replace(/[^A-Za-z]/g, '').split('').sort((a, b) => {
     if (a.toLowerCase() === b.toLowerCase()) {
@@ -1165,8 +1387,11 @@ function alphabetized(s) {
   }).join('');
 }
 
-/* 6 kyu
-Decipher this!} */
+/*****************************
+74.) Decipher this!
+solved: 7/1/2023
+codewars.com/kata/581e014b55f2c52bb00000f8
+*****************************/
 function decipherThis(str) {
   return str.split(' ').map(x => {
     let s = String.fromCharCode(+x.replace(/[^0-9.]/g, ''));
@@ -1176,15 +1401,21 @@ function decipherThis(str) {
   }).join(' ');
 };
 
-/* 6 kyu
-Minutes to Midnight} */
+/*****************************
+75.) Minutes to Midnight
+solved: 7/1/2023
+codewars.com/kata/58528e9e22555d8d33000163
+*****************************/
 function minutesToMidnight(d) {
   const minutes = 1440 - (d.getHours() * 60) - d.getMinutes() - (d.getSeconds() > 30 ? 1 : 0);
   return minutes === 1 ? minutes + " minute" : minutes + " minutes";
 }
 
-/* 6 kyu
-Fun with ES6 Classes #6 - Fake Files (Basic)} */
+/*****************************
+76.) Fun with ES6 Classes #6 - Fake Files (Basic)
+solved: 7/1/2023
+codewars.com/kata/5784c8116211383b5f0001d3
+*****************************/
 class File {
   constructor (name, contents) {
     Object.defineProperties(this, {
@@ -1214,16 +1445,22 @@ class File {
   }
 }
 
-/* 6 kyu
-Time-like string format} */
+/*****************************
+77.) Time-like string format
+solved: 6/30/2023
+codewars.com/kata/51e000d070fe4414000003f0
+*****************************/
 function solution(hour) {
   if (hour < 100 || hour > 9999) throw new Error();
   let [h, m] = hour.toString().padStart(4, '0').match(/.{1,2}/g);
   return `${parseInt(h)}:${m}`;
 }
 
-/* 6 kyu
-Simple Fun #396: Find the Longest Substring Consisting of Unique Characters} */
+/*****************************
+78.) Simple Fun #396: Find the Longest Substring Consisting of Unique Characters
+solved: 6/30/2023
+codewars.com/kata/5bcd90808f9726d0f6000091
+*****************************/
 function longestSubstringOf(string) {
   let [max, curr] = ['', ''];
 
@@ -1242,8 +1479,11 @@ function longestSubstringOf(string) {
   return max.length;
 }
 
-/* 6 kyu
-Running Average} */
+/*****************************
+79.) Running Average
+solved: 6/30/2023
+codewars.com/kata/589e4d646642d144a90000d8
+*****************************/
 function runningAverage() {
   let [t, c] = [0, 0];
   return function (n) {
@@ -1255,8 +1495,11 @@ function runningAverage() {
   };
 }
 
-/* 6 kyu
-Repeated Substring} */
+/*****************************
+80.) Repeated Substring
+solved: 6/30/2023
+codewars.com/kata/5491689aff74b9b292000334
+*****************************/
 function f(s) {
   let [m, n] = ['', 0];
 
@@ -1270,8 +1513,11 @@ function f(s) {
   return n - 1 <= 1 ? [s, 1] : [m, n - 1];
 }
 
-/* 6 kyu
-Color Choice} */
+/*****************************
+81.) Color Choice
+solved: 6/30/2023
+codewars.com/kata/55be10de92aad5ef28000023
+*****************************/
 const checkchoose = (m, n) => {
   const fact = n => n <= 1 ? 1 : n * fact(n - 1);
   
@@ -1282,16 +1528,22 @@ const checkchoose = (m, n) => {
   return -1;
 };
 
-/* 6 kyu
-WeIrD StRiNg CaSe} */
+/*****************************
+82.) WeIrD StRiNg CaSe
+solved: 5/13/2023
+codewars.com/kata/52b757663a95b11b3d00062d
+*****************************/
 function toWeirdCase(s) {
   return s.split(' ').map((x) => {
     return x.split('').map((x, i) => i % 2 === 0 ? x.toUpperCase() : x).join('');
   }).join(' ');
 }
 
-/* 6 kyu
-Prefill an Array} */
+/*****************************
+83.) Prefill an Array
+solved: 5/13/2023
+codewars.com/kata/54129112fb7c188740000162
+*****************************/
 function prefill(n, v) {
   if (!Number.isInteger(+n) || +n < 0 || !isFinite(n) || typeof n === 'boolean') throw new TypeError(`${n} is invalid`);
 
@@ -1303,15 +1555,21 @@ function prefill(n, v) {
   return res;
 }
 
-/* 6 kyu
-Handshake problem} */
+/*****************************
+84.) Handshake problem
+solved: 5/13/2023
+codewars.com/kata/5574835e3e404a0bed00001b
+*****************************/
 function getParticipants(h) {
   return h ? Math.ceil((1 + Math.sqrt(1 + 8 * h)) / 2) : 0;
 }
 
 
-/* 6 kyu
-Coding Meetup #15 - Higher-Order Functions Series - Find the odd names} */
+/*****************************
+85.) Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
+solved: 5/13/2023
+codewars.com/kata/583a8bde28019d615a000035
+*****************************/
 function findOddNames(list) {
   return list.filter((p) => {
     let isOdd = p.firstName.split('').map(x => x.charCodeAt(0)).reduce((a, c) => a + c, 0) % 2 !== 0;
@@ -1319,24 +1577,33 @@ function findOddNames(list) {
   })
 }
 
-/* 6 kyu
-Spread number} */
+/*****************************
+86.) Spread number
+solved: 5/13/2023
+codewars.com/kata/5cbded7a36240b000dac91eb
+*****************************/
 Number.prototype[Symbol.iterator] = function* () {
   for (let i = 1; i <= this; i++) {
     yield i;
   }
 }
 
-/* 6 kyu
-Reverse Vowels In A String} */
+/*****************************
+87.) Reverse Vowels In A String
+solved: 5/13/2023
+codewars.com/kata/585db3e8eec141ce9a00008f
+*****************************/
 function reverseVowels(str) {
   str = str.split("");
   let arr = str.reduce((acc, cur) => /[^aeiou]/i.test(cur) ? acc : [...acc, cur], []);
   return str.map((item) => /[^aeiou]/i.test(item) ? item : arr.pop()).join("");
 }
 
-/* 6 kyu
-SMS Lottery Bet Validator} */
+/*****************************
+88.) SMS Lottery Bet Validator
+solved: 5/13/2023
+codewars.com/kata/59a3e2897ac7fd05f800005f
+*****************************/
 function validateBet(game, text) {
   let invalidChar = text.match(/^[0-9, ]+$/gi);
   if (!invalidChar) return null;
@@ -1352,8 +1619,11 @@ function validateBet(game, text) {
   return betNums.sort((a, b) => a - b);
 }
 
-/* 6 kyu
-Consecutive strings} */
+/*****************************
+89.) Consecutive strings
+solved: 5/12/2023
+codewars.com/kata/56a5d994ac971f1ac500003e
+*****************************/
 function longestConsec(arr, k) {
   if (k <= 0 || k > arr.length || !arr.length) return '';
   let j = 0;
@@ -1378,8 +1648,11 @@ function longestConsec(arr, k) {
   return longest.str[0];
 }
 
-/* 6 kyu
-Give me a Diamond} */
+/*****************************
+90.) Give me a Diamond
+solved: 5/12/2023
+codewars.com/kata/5503013e34137eeeaa001648
+*****************************/
 function diamond(n) {
   if (n % 2 === 0 || n <= 0) return null;
   let [s1, s2] = [Math.floor(n / 2), 1];
@@ -1397,8 +1670,11 @@ function diamond(n) {
   return a + b;
 }
 
-/* 6 kyu
-Most Consecutive Zeros of a Binary Number} */
+/*****************************
+91.) Most Consecutive Zeros of a Binary Number
+solved: 5/12/2023
+codewars.com/kata/59decdf40863c76ae3000080
+*****************************/
 function maxConsecZeros(n) {
   return [
     "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", 
@@ -1406,8 +1682,11 @@ function maxConsecZeros(n) {
   ][Math.max(...(+n).toString(2).split('1').map(x => x.length))];
 }
 
-/* 6 kyu
-Get your steppin' on son} */
+/*****************************
+92.) Get your steppin' on son
+solved: 5/12/2023
+codewars.com/kata/55e00266d494ce5155000032
+*****************************/
 function wordStep(str) {
   str = str.split(' ');
   let w = 0;
@@ -1441,8 +1720,11 @@ function wordStep(str) {
   return res;
 }
 
-/* 6 kyu
-IndexOf Array in Array} */
+/*****************************
+93.) IndexOf Array in Array
+solved: 5/12/2023
+codewars.com/kata/5783ef69202c0ee4cb000265
+*****************************/
 var searchArray = function (arr, query) {
   let res = -1;
   if (query.length !== 2) {
@@ -1462,8 +1744,11 @@ var searchArray = function (arr, query) {
   return res;
 };
 
-/* 6 kyu
-Framed Reflection} */
+/*****************************
+94.) Framed Reflection
+solved: 5/12/2023
+codewars.com/kata/581331293788bc1702001fa6
+*****************************/
 function mirror(text) {
   text = text.split(' ').reverse();
   const len = text.reduce((a, b) => a.length > b.length ? a : b).length + 4;
@@ -1482,8 +1767,11 @@ function mirror(text) {
   return res += temp.padEnd(len - 2, ' ') + ' *\n' + '*'.repeat(len);
 }
 
-/* 6 kyu
-Create iterator} */
+/*****************************
+95.) Create iterator
+solved: 5/12/2023
+codewars.com/kata/5c743cec901022438549964a
+*****************************/
 const createIterator = (array) => {
   const iterator = {
     index: 0,
@@ -1496,8 +1784,11 @@ const createIterator = (array) => {
   return iterator;
 };
 
-/* 6 kyu
-Create a frame!} */
+/*****************************
+96.) Create a frame!
+solved: 5/12/2023
+codewars.com/kata/5672f4e3404d0609ec00000a
+*****************************/
 const frame = (text, char) => {
   const len = text.reduce((a, b) => a.length > b.length ? a : b).length + 4;
   const fill = char.repeat(len);
@@ -1509,8 +1800,11 @@ const frame = (text, char) => {
   return res + fill;
 };
 
-/* 6 kyu
-The takeWhile Function} */
+/*****************************
+97.) The takeWhile Function
+solved: 5/12/2023
+codewars.com/kata/54f9173aa58bce9031001548
+*****************************/
 function takeWhile(arr, pred) {
   if (!pred(arr[0])) return [];
   let [res, curr] = [[], []];
@@ -1530,8 +1824,11 @@ function takeWhile(arr, pred) {
   return res;
 }
 
-/* 6 kyu
-Make it equal} */
+/*****************************
+98.) Make it equal
+solved: 5/10/2023
+codewars.com/kata/5736b7b749fc585e8900001f
+*****************************/
 var a = {
   i: 2,
   toString: function () {
@@ -1539,8 +1836,11 @@ var a = {
   }
 }
 
-/* 6 kyu
-Time Math} */
+/*****************************
+99.) Time Math
+solved: 5/10/2023
+codewars.com/kata/5aceae374d9fd1266f0000f0
+*****************************/
 function timeMath(t1, op, t2) {
   [t1, t2] = [t1.split(':'), t2.split(':')]
   let d1 = new Date(1969, 6, 9, +t1[0], +t1[1], +t1[2], 0);
@@ -1553,15 +1853,21 @@ function timeMath(t1, op, t2) {
   return d1.toTimeString().slice(0, 8);
 }
 
-/* 6 kyu
-Write JavaScript's 'call' function using apply.} */
+/*****************************
+100.) Write JavaScript's 'call' function using apply.
+solved: 5/10/2023
+codewars.com/kata/52d56d9c6b02b2fa9a0006d9
+*****************************/
 Function.prototype.call = function () {
   const [context, ...args] = [...arguments];
   return this.apply(context, args)
 };
 
-/* 6 kyu
-Magic Squares} */
+/*****************************
+101.) Magic Squares
+solved: 5/9/2023
+codewars.com/kata/58c979aafd407d6e9f000071
+*****************************/
 function magicSquare(arr) {
   if (!arr[0]) return false;
   const sums = new Set();
@@ -1581,8 +1887,11 @@ function magicSquare(arr) {
   return sums.size === 1;
 }
 
-/* 6 kyu
-Unary function chainer} */
+/*****************************
+102.) Unary function chainer
+solved: 5/9/2023
+codewars.com/kata/54ca3e777120b56cb6000710
+*****************************/
 function chained(functions) {
   return function (input) {
     return functions.reduce(function (input, fn) {
@@ -1591,8 +1900,11 @@ function chained(functions) {
   };
 }
 
-/* 6 kyu
-Find Cracker.} */
+/*****************************
+103.) Find Cracker.
+solved: 5/5/2023
+codewars.com/kata/59f70440bee845599c000085
+*****************************/
 function findHack(arr) {
   const m = { 'A': 30, 'B': 20, 'C': 10, 'D': 5 };
   let res = [];
@@ -1612,8 +1924,11 @@ function findHack(arr) {
   return res;
 }
 
-/* 6 kyu
-Custom Setters and Getters} */
+/*****************************
+104.) Custom Setters and Getters
+solved: 5/5/2023
+codewars.com/kata/5241060ff2471a5d7600025a
+*****************************/
 function Archiver() {
   let archive = [];
   let tempval = null;
@@ -1628,8 +1943,11 @@ function Archiver() {
   this.getArchive = () => archive;
 }
 
-/* 6 kyu
-Sequences and Series} */
+/*****************************
+105.) Sequences and Series
+solved: 5/5/2023
+codewars.com/kata/5254bd1357d59fbbe90001ec
+*****************************/
 function getScore(n) {
   let x = 0;
   while (n > 0) {
@@ -1639,15 +1957,21 @@ function getScore(n) {
   return x * 50
 }
 
-/* 6 kyu
-Piano Kata, Part 1} */
+/*****************************
+106.) Piano Kata, Part 1
+solved: 5/5/2023
+codewars.com/kata/589273272fab865136000108
+*****************************/
 function blackOrWhiteKey(kc) {
   let k = ['w', 'b', 'w', 'w', 'b', 'w', 'b', 'w', 'w', 'b', 'w', 'b'];
   return k[((kc - 1) % 88) % 12] === 'w' ? 'white' : 'black';
 }
 
-/* 6 kyu
-Clocky Mc Clock-Face} */
+/*****************************
+107.) Clocky Mc Clock-Face
+solved: 5/5/2023
+codewars.com/kata/59752e1f064d1261cb0000ec
+*****************************/
 var whatTimeIsIt = function (angle) {
   const date = new Date(1, 1, 1, 0, (angle * 1440) / 360 / 2);
   let [hours, minutes] = [date.getHours(), date.getMinutes()];
@@ -1656,8 +1980,11 @@ var whatTimeIsIt = function (angle) {
   return `${convert(hours)}:${convert(minutes)}`;
 };
 
-/* 6 kyu
-Is Integer Array?} */
+/*****************************
+108.) Is Integer Array?
+solved: 5/5/2023
+codewars.com/kata/52a112d9488f506ae7000b95
+*****************************/
 function isIntArray(arr) {
   if (!Array.isArray(arr)) return false;
   for (let i = 0; i < arr.length; i++) {
@@ -1669,8 +1996,11 @@ function isIntArray(arr) {
 }
 
 
-/* 6 kyu
-Simple Simple Simple String Expansion} */
+/*****************************
+109.) Simple Simple Simple String Expansion
+solved: 5/5/2023
+codewars.com/kata/5ae326342f8cbc72220000d2
+*****************************/
 function stringExpansion(s) {
   let len = null;
   let res = '';
@@ -1689,8 +2019,11 @@ function stringExpansion(s) {
 }
 
 
-/* 6 kyu
-Difference of 2} */
+/*****************************
+110.) Difference of 2
+solved: 3/23/2023
+codewars.com/kata/5340298112fa30e786000688
+*****************************/
 function twosDifference(input) {
   let res = [];
   input = input.sort((a, b) => a - b);
@@ -1706,8 +2039,11 @@ function twosDifference(input) {
   return res;
 }
 
-/* 6 kyu
-Count the photos!} */
+/*****************************
+111.) Count the photos!
+solved: 3/23/2023
+codewars.com/kata/6319dba6d6e2160015a842ed
+*****************************/
 function countPhotos(road) {
   let [left, right, count] = [0, 0, 0];
   for (let i = 0, j = road.length - 1; i < road.length; i++, j--) {
@@ -1720,8 +2056,11 @@ function countPhotos(road) {
   return count;
 }
 
-/* 6 kyu
-Binary to Text (ASCII) Conversion} */
+/*****************************
+112.) Binary to Text (ASCII) Conversion
+solved: 3/23/2023
+codewars.com/kata/5583d268479559400d000064
+*****************************/
 function binaryToString(binary) {
   let res = '';
   for (let i = 0; i < binary.length; i += 8) {
@@ -1730,8 +2069,11 @@ function binaryToString(binary) {
   return res;
 }
 
-/* 6 kyu
-Sum The Tree} */
+/*****************************
+113.) Sum The Tree
+solved: 2/22/2023
+codewars.com/kata/5800580f8f7ddaea13000025
+*****************************/
 function sumTheTreeValues(root){
   if (!root) return null;
   let sum = 0;
@@ -1749,8 +2091,11 @@ function sumTheTreeValues(root){
   return sum;
 }
 
-/* 6 kyu
-Smart Sum} */
+/*****************************
+114.) Smart Sum
+solved: 2/21/2023
+codewars.com/kata/5831200eb812b8016d000094
+*****************************/
 function smartSum() {
   let sum = 0;
   const args = [...arguments]
@@ -1764,8 +2109,11 @@ function smartSum() {
   return sum;
 }
 
-/* 6 kyu
-Are we alternate?} */
+/*****************************
+115.) Are we alternate?
+solved: 2/20/2023
+codewars.com/kata/59325dc15dbb44b2440000af
+*****************************/
 function isAlt(word) {
   if (word.length < 2) return true;
   let v = { 'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1 };
@@ -1777,16 +2125,22 @@ function isAlt(word) {
   return true;
 }
 
-/* 6 kyu
-Does array x contain all values within array y?} */
+/*****************************
+116.) Does array x contain all values within array y?
+solved: 2/20/2023
+codewars.com/kata/5143cc9694a24abcd2000001
+*****************************/
 Object.defineProperty(Array.prototype, "containsAll", {
   value: function containsAll(a) {
     return new Set([...a, ...this]).size === this.length;
   }
 })
 
-/* 6 kyu
-Insert value into an array} */
+/*****************************
+117.) Insert value into an array
+solved: 2/20/2023
+codewars.com/kata/581dc1852d68e751180000c6
+*****************************/
 Array.prototype.insert = function (index, value) {
   index = index < 0 ? 0 : index > this.length ? this.length : index;
   this.splice(index, 0, value);
@@ -1794,8 +2148,11 @@ Array.prototype.insert = function (index, value) {
 };
 Object.defineProperty(Array.prototype, "insert", { enumerable: false });
 
-/* 6 kyu
-Custom each() Array method} */
+/*****************************
+118.) Custom each() Array method
+solved: 2/20/2023
+codewars.com/kata/513e7e1aee7d36073e00000d
+*****************************/
 Array.prototype.each = function (cb) {
   for (let i = 0; i < this.length; i++) { 
     if (cb(this[i], i)) {
@@ -1804,8 +2161,11 @@ Array.prototype.each = function (cb) {
   }
 }
 
-/* 6 kyu
-Implementing Array.prototype.groupBy method} */
+/*****************************
+119.) Implementing Array.prototype.groupBy method
+solved: 2/20/2023
+codewars.com/kata/53c2c3e78d298dddda000460
+*****************************/
 Array.prototype.groupBy = function (fn) {
   let h = {};
   for (let item of this) {
@@ -1819,8 +2179,11 @@ Array.prototype.groupBy = function (fn) {
   return h;
 }
 
-/* 6 kyu
-Parse a linked list from a string} */
+/*****************************
+120.) Parse a linked list from a string
+solved: 2/20/2023
+codewars.com/kata/582c5382f000e535100001a7
+*****************************/
 function parse(string) {
   if (string.length === 4 || !string) {
     return null;
@@ -1832,8 +2195,11 @@ function parse(string) {
   }
 }
 
-/* 6 kyu
-Mexican Wave} */
+/*****************************
+121.) Mexican Wave
+solved: 2/19/2023
+codewars.com/kata/58f5c63f1e26ecda7e000029
+*****************************/
 function wave(str) {
   str = str.split("")
   let res = [];
@@ -1847,8 +2213,11 @@ function wave(str) {
   return res
 }
 
-/* 6 kyu
-Format words into a sentence} */
+/*****************************
+122.) Format words into a sentence
+solved: 2/19/2023
+codewars.com/kata/51689e27fe9a00b126000004
+*****************************/
 function formatWords(w) {
   if (!w || !w.length) return '';
 
@@ -1864,8 +2233,11 @@ function formatWords(w) {
   return res.slice(0, -2) + ` and ${w[w.length - 1]}`;
 }
 
-/* 6 kyu
-Selective Array Reversing} */
+/*****************************
+123.) Selective Array Reversing
+solved: 2/19/2023
+codewars.com/kata/58f6000bc0ec6451960000fd
+*****************************/
 function selReverse(arr, len) {
   if (len <= 1) return arr;
   let res = [], temparr = [];
@@ -1880,8 +2252,11 @@ function selReverse(arr, len) {
   return temparr.length > 0 ? [...res, ...temparr] : res;
 }
 
-/* 6 kyu
-Getting MAD} */
+/*****************************
+124.) Getting MAD
+solved: 2/19/2023
+codewars.com/kata/593a061b942a27ac940000a7
+*****************************/
 function getting_mad(arr) {
   let min = Math.abs(arr[0] - arr[1]);
   for (let i = 0; i < arr.length; i++) {
@@ -1892,8 +2267,11 @@ function getting_mad(arr) {
   return min;
 }
 
-/* 6 kyu
-Calculate number of inversions in array} */
+/*****************************
+125.) Calculate number of inversions in array
+solved: 2/18/2023
+codewars.com/kata/537529f42993de0e0b00181f
+*****************************/
 function countInversions(array) {
   let count = 0;
   for (let i = 0; i < array.length; i++) {
@@ -1907,8 +2285,11 @@ function countInversions(array) {
   return count;
 }
 
-/* 6 kyu
-Find matching parenthesis} */
+/*****************************
+126.) Find matching parenthesis
+solved: 2/18/2023
+codewars.com/kata/59293c2cfafd38975600002d
+*****************************/
 String.prototype.findParenMatch = function (pos) {
   let l = [], r = [], check = this[pos];
   const len = check === ")" ? pos + 1 : this.length;
@@ -1927,8 +2308,11 @@ String.prototype.findParenMatch = function (pos) {
   return -1;
 };
 
-/* 6 kyu
-Happy numbers} */
+/*****************************
+127.) Happy numbers
+solved: 2/17/2023
+codewars.com/kata/5464cbfb1e0c08e9b3000b3e
+*****************************/
 function isHappy(n) {
   if (n === 1) return true;
   let sum = 0;
@@ -1942,8 +2326,11 @@ function isHappy(n) {
   return sum === 1;
 }
 
-/* 6 kyu
-Multiples of 3 or 5} */
+/*****************************
+128.) Multiples of 3 or 5
+solved: 2/17/2023
+codewars.com/kata/514b92a657cdc65150000006
+*****************************/
 function solution(n) {
   if (n <= 1) return 0;
   return new Array(n - 1).fill(n - 1).reduce((a, c, i) => {
@@ -1954,8 +2341,11 @@ function solution(n) {
 }
 
 
-/* 6 kyu
-Highest Scoring Word} */
+/*****************************
+129.) Highest Scoring Word
+solved: 2/15/2023
+codewars.com/kata/57eb8fcdf670e99d9b000272
+*****************************/
 function high(x) {
   let max = 0;
   let cnt = 0;
@@ -1978,8 +2368,11 @@ function high(x) {
   return cnt > max ? tempword : word;
 }
 
-/* 6 kyu
-N High Scores} */
+/*****************************
+130.) N High Scores
+solved: 2/14/2023
+codewars.com/kata/5ad0fdf461c493cc09000036
+*****************************/
 function topScores(r, n) {
   if (n <= 0) return [];
   const h = {};
@@ -1998,8 +2391,11 @@ function topScores(r, n) {
   }).slice(0, n);
 }
 
-/* 6 kyu
-Well, that's just (proto)typical! The Misadventures of Bob the Highly Paid Consultant #3} */
+/*****************************
+131.) Well, that's just (proto)typical! The Misadventures of Bob the Highly Paid Consultant #3
+solved: 2/14/2023
+codewars.com/kata/5877146c7aad3940f0000029
+*****************************/
 class Cart {
   constructor(user) {
     this.user = user;
@@ -2027,8 +2423,11 @@ class Cart {
   }
 }
 
-/* 6 kyu
-Most Frequent Weekdays} */
+/*****************************
+132.) Most Frequent Weekdays
+solved: 2/14/2023
+codewars.com/kata/56eb16655250549e4b0013f4
+*****************************/
 function mostFrequentDays(y) {
   const wn = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const [start, end] = [new Date(y, 0, 1), new Date(y, 11, 31)];
@@ -2048,8 +2447,11 @@ function mostFrequentDays(y) {
   return res;
 }
 
-/* 6 kyu
-String character frequency} */
+/*****************************
+133.) String character frequency
+solved: 2/14/2023
+codewars.com/kata/5a1a514effe75fd63b0000f2
+*****************************/
 function solve(s){
   const freq = {};
   for (let l of s) { freq[l] = (freq[l] || 0) + 1; }
@@ -2063,8 +2465,11 @@ function solve(s){
   return false;
 };
 
-/* 6 kyu
-Closures and Scopes} */
+/*****************************
+134.) Closures and Scopes
+solved: 2/13/2023
+codewars.com/kata/526ec46d6f5e255e150002d1
+*****************************/
 function createFunction(n) {
   return function() {
     return n;
@@ -2079,8 +2484,11 @@ function createFunctions(n) {
   return callbacks;
 }
 
-/* 6 kyu
-Determine the date by the day number} */
+/*****************************
+135.) Determine the date by the day number
+solved: 12/26/2022
+codewars.com/kata/602afedfd4a64d0008eb4e6e
+*****************************/
 function getDay(day, isLeap){
   let months = [
     'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
@@ -2095,8 +2503,11 @@ function getDay(day, isLeap){
   }
 }
 
-/* 6 kyu
-Valid Braces} */
+/*****************************
+136.) Valid Braces
+solved: 10/29/2022
+codewars.com/kata/5277c8a221e209d3f6000b56
+*****************************/
 function validBraces(braces) {
   const key = {
     "(": 1, "[": 2, "{": 3,
@@ -2118,8 +2529,11 @@ function validBraces(braces) {
 }
 
 
-/* 6 kyu
-String average} */
+/*****************************
+137.) String average
+solved: 10/20/2022
+codewars.com/kata/5966847f4025872c7d00015b
+*****************************/
 function averageString(str) {
   let arr = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
   str = str.split(" ")
@@ -2132,8 +2546,11 @@ function averageString(str) {
 }
 
 
-/* 6 kyu
-Find the Mine!} */
+/*****************************
+138.) Find the Mine!
+solved: 10/20/2022
+codewars.com/kata/528d9adf0e03778b9e00067e
+*****************************/
 function mineLocation(field){
   let rows = field.length
   let pos = [].concat(...field).indexOf(1) 
@@ -2141,8 +2558,11 @@ function mineLocation(field){
 }
 
 
-/* 6 kyu
-first character that repeats} */
+/*****************************
+139.) first character that repeats
+solved: 10/20/2022
+codewars.com/kata/54f9f4d7c41722304e000bbb
+*****************************/
 function firstDup(s) {
   let arr = s.split('');
   for (let i = 0; i < arr.length; i++) {
@@ -2154,8 +2574,11 @@ function firstDup(s) {
 }
 
 
-/* 6 kyu
-Clock in Mirror} */
+/*****************************
+140.) Clock in Mirror
+solved: 10/20/2022
+codewars.com/kata/56548dad6dae7b8756000037
+*****************************/
 function WhatIsTheTime(timeInMirror) {
   let [h, m] = timeInMirror.split(":")
   const helper = (n) => +n < 10 ? "0" + n : n
@@ -2165,8 +2588,11 @@ function WhatIsTheTime(timeInMirror) {
   return `${helper(h)}:${helper(m)}`
 }
 
-/* 6 kyu
-Ordinal Numbers} */
+/*****************************
+141.) Ordinal Numbers
+solved: 10/20/2022
+codewars.com/kata/52dda52d4a88b5708f000024
+*****************************/
 function ordinal(number, brief) {
   let s = ["th", "st", "nd", "rd"], v = number % 100;
   let ord = (s[(v - 20) % 10] || s[v] || s[0]);
@@ -2177,8 +2603,11 @@ function ordinal(number, brief) {
   }
 }
 
-/* 6 kyu
-Adding ordinal indicator suffixes to numbers} */
+/*****************************
+142.) Adding ordinal indicator suffixes to numbers
+solved: 10/20/2022
+codewars.com/kata/52dca71390c32d8fb900002b
+*****************************/
 function numberToOrdinal(n) {
   let o = ['th', 'st', 'nd', 'rd'], l = n % 100
   return n > 0 
@@ -2187,8 +2616,11 @@ function numberToOrdinal(n) {
 }
 
 
-/* 6 kyu
-Good vs Evil} */
+/*****************************
+143.) Good vs Evil
+solved: 10/3/2022
+codewars.com/kata/52761ee4cffbc69732000738
+*****************************/
 function goodVsEvil(good, evil) {
   const helper = (side, arr) => arr.map((x, i) => x * side.split(" ")[i]).reduce((a, c) => a + c, 0)
   let goodsum = helper(good, [1, 2, 3, 3, 4, 10])
@@ -2196,8 +2628,11 @@ function goodVsEvil(good, evil) {
   return goodsum > evilsum ? "Battle Result: Good triumphs over Evil" : goodsum < evilsum ? "Battle Result: Evil eradicates all trace of Good" : "Battle Result: No victor on this battle field"
 }
 
-/* 6 kyu
-Roman Numerals Decoder} */
+/*****************************
+144.) Roman Numerals Decoder
+solved: 9/28/2022
+codewars.com/kata/51b6249c4612257ac0000005
+*****************************/
 function solution (r) {
   const key = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000};
   let sum = 0;
@@ -2207,8 +2642,11 @@ function solution (r) {
   return sum
 }
 
-/* 6 kyu
-Delete occurrences of an element if it occurs more than n times} */
+/*****************************
+145.) Delete occurrences of an element if it occurs more than n times
+solved: 9/23/2022
+codewars.com/kata/554ca54ffa7d91b236000023
+*****************************/
 function deleteNth(arr,n){
   let h = {}
   let res = []
@@ -2220,8 +2658,11 @@ function deleteNth(arr,n){
 }
 
 
-/* 6 kyu
-Highest Rank Number in an Array} */
+/*****************************
+146.) Highest Rank Number in an Array
+solved: 9/22/2022
+codewars.com/kata/5420fc9bb5b2c7fd57000004
+*****************************/
 function highestRank(arr) {
   let h = {}
   for (n of arr) {
@@ -2232,8 +2673,11 @@ function highestRank(arr) {
 }
 
 
-/* 6 kyu
-Fold an array} */
+/*****************************
+147.) Fold an array
+solved: 9/22/2022
+codewars.com/kata/57ea70aa5500adfe8a000110
+*****************************/
 function foldArray(arr, runs) {
   let n = arr.length
   let len = n % 2 == 0 ? Math.floor(n / 2) : Math.ceil(n / 2)
@@ -2244,8 +2688,11 @@ function foldArray(arr, runs) {
 }
 
 
-/* 6 kyu
-Dashatize it} */
+/*****************************
+148.) Dashatize it
+solved: 9/22/2022
+codewars.com/kata/58223370aef9fc03fd000071
+*****************************/
 function dashatize(num) {
   if (!Number.isInteger(num)) return 'NaN'
   num=[...""+num].filter(x => Number.isInteger(+x)).map((x) => { 
@@ -2257,15 +2704,21 @@ function dashatize(num) {
 }
 
 
-/* 6 kyu
-Grouped by commas} */
+/*****************************
+149.) Grouped by commas
+solved: 9/22/2022
+codewars.com/kata/5274e122fc75c0943d000148
+*****************************/
 function groupByCommas(n) {
   return n.toLocaleString()
 }
 
 
-/* 6 kyu
-Srot the inner ctonnet in dsnnieedcg oredr} */
+/*****************************
+150.) Srot the inner ctonnet in dsnnieedcg oredr
+solved: 9/22/2022
+codewars.com/kata/5898b4b71d298e51b600014b
+*****************************/
 function sortTheInnerContent(words) {
   let res = ''
   words.split(" ").forEach((word) => {
@@ -2278,8 +2731,11 @@ function sortTheInnerContent(words) {
   return res.slice(0, res.length - 1)
 }
 
-/* 6 kyu
-Lottery Ticket} */
+/*****************************
+151.) Lottery Ticket
+solved: 9/22/2022
+codewars.com/kata/57f625992f4d53c24200070e
+*****************************/
 function bingo(ticket, win){
   let res = Array(ticket.length).fill(null)
   ticket.forEach((el, i) => {
@@ -2289,8 +2745,11 @@ function bingo(ticket, win){
   return res.filter(Boolean).length >= win ? "Winner!" : "Loser!"
 }
 
-/* 6 kyu
-Zero-plentiful Array} */
+/*****************************
+152.) Zero-plentiful Array
+solved: 9/22/2022
+codewars.com/kata/59e270da7997cba3d3000041
+*****************************/
 function zeroPlentiful(arr) {
   let r = [], c = [], count = 0
   for (let i = 0; i < arr.length; i++) {
@@ -2301,8 +2760,11 @@ function zeroPlentiful(arr) {
 }
 
 
-/* 6 kyu
-Title Case} */
+/*****************************
+153.) Title Case
+solved: 9/16/2022
+codewars.com/kata/5202ef17a402dd033c000009
+*****************************/
 function titleCase(t, m) {
   if (!t) return ''
   const helper = (arr) => {
@@ -2324,15 +2786,21 @@ function titleCase(t, m) {
 }
 
 
-/* 6 kyu
-Which are in?} */
+/*****************************
+154.) Which are in?
+solved: 9/16/2022
+codewars.com/kata/550554fd08b86f84fe000a58
+*****************************/
 function inArray(a1, a2) {
   return a1.filter(x => !!~a2.join(" ").indexOf(x)).sort()
 }
 
 
-/* 6 kyu
-Help the bookseller !} */
+/*****************************
+155.) Help the bookseller !
+solved: 9/16/2022
+codewars.com/kata/54dc6f5a224c26032800005c
+*****************************/
 function stockList(art, ctg){
   let val = Array(ctg.length).fill(0)
   art.forEach((el, i) => {
@@ -2353,8 +2821,11 @@ function stockList(art, ctg){
 }
 
 
-/* 6 kyu
-Reversing a Process} */
+/*****************************
+156.) Reversing a Process
+solved: 9/16/2022
+codewars.com/kata/5dad6e5264e25a001918a1fc
+*****************************/
 function decode(r) {
   let key = parseInt(r), str = r.slice(key.toString().length).split("")
   let cipher = 'abcdefghijklmnopqrstuvwxyz'
@@ -2365,8 +2836,11 @@ function decode(r) {
 }
 
 
-/* 6 kyu
-Character with longest consecutive repetition} */
+/*****************************
+157.) Character with longest consecutive repetition
+solved: 9/16/2022
+codewars.com/kata/586d6cefbcc21eed7a001155
+*****************************/
 function longestRepetition(s) {
   if (!s) return ['', 0]
   let temp = ''
@@ -2384,16 +2858,22 @@ function longestRepetition(s) {
 }
 
 
-/* 6 kyu
-Count the days!} */
+/*****************************
+158.) Count the days!
+solved: 9/14/2022
+codewars.com/kata/5837fd7d44ff282acd000157
+*****************************/
 function countDays(d) {
   let days = Math.round((new Date().getTime() - d.getTime())/1000/60/60/24)
   return days == 0 ? "Today is the day!" : days < 0 ? `${days*-1} days` : "The day is in the past!"
 }
 
 
-/* 6 kyu
-Find the odd int} */
+/*****************************
+159.) Find the odd int
+solved: 9/13/2022
+codewars.com/kata/54da5a58ea159efa38000836
+*****************************/
 function findOdd(nums) {
   let res = 0, h = {}
   for (n of nums) { h[n] ? h[n]++ : h[n] = 1 }
@@ -2402,8 +2882,11 @@ function findOdd(nums) {
 }
 
 
-/* 6 kyu
-ASCII hex converter} */
+/*****************************
+160.) ASCII hex converter
+solved: 9/10/2022
+codewars.com/kata/52fea6fd158f0576b8000089
+*****************************/
 var Converter = {
   toAscii: function (hex) {
     let arr = [], temp = '', f = false;
@@ -2426,8 +2909,11 @@ var Converter = {
 }
 
 
-/* 6 kyu
-Hex class} */
+/*****************************
+161.) Hex class
+solved: 9/10/2022
+codewars.com/kata/5483366098aa442def0009af
+*****************************/
 class Hex {
   constructor(value) {
     this.value = value
@@ -2453,8 +2939,11 @@ class Hex {
 }
 
 
-/* 6 kyu
-What's your running pace?} */
+/*****************************
+162.) What's your running pace?
+solved: 9/8/2022
+codewars.com/kata/578b8c0e84ac69a4d20004c8
+*****************************/
 function runningPace(distance, time){
   time = time.split(":").map((x, i) => i == 0 ? x *= 60 : +x)
   let min = Math.floor((time[0]+time[1])/distance)
@@ -2463,8 +2952,11 @@ function runningPace(distance, time){
   return `${Math.floor(min/60)}:${sec}`
 }
 
-/* 6 kyu
-What century is it?} */
+/*****************************
+163.) What century is it?
+solved: 9/8/2022
+codewars.com/kata/52fb87703c1351ebd200081f
+*****************************/
 function whatCentury(year) {
   const pattern = ['st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th', 'th']
   let n = Math.ceil(year/100)
@@ -2486,8 +2978,11 @@ function whatCentury(year) {
   }
 }
 
-/* 6 kyu
-New Cashier Does Not Know About Space or Shift} */
+/*****************************
+164.) New Cashier Does Not Know About Space or Shift
+solved: 9/7/2022
+codewars.com/kata/5d23d89906f92a00267bb83d
+*****************************/
 function getOrder(input) {
   let len = input.length
   let s = ['burger','fries','chicken','pizza','sandwich','onionrings','milkshake','coke']
@@ -2508,8 +3003,11 @@ function getOrder(input) {
   return res.sort((a, b) => s.indexOf(a) - s.indexOf(b)).map(x => x[0].toUpperCase() + x.slice(1)).join(" ")
 }
 
-/* 6 kyu
-Maze Runner} */
+/*****************************
+165.) Maze Runner
+solved: 9/7/2022
+codewars.com/kata/58663693b359c4a6560001d6
+*****************************/
 function mazeRunner(m, d) {
   m = [].concat(...m)
   let len = Math.sqrt(m.length)
@@ -2536,8 +3034,11 @@ function mazeRunner(m, d) {
   }
 }
 
-/* 6 kyu
-Tortoise racing} */
+/*****************************
+166.) Tortoise racing
+solved: 9/5/2022
+codewars.com/kata/55e2adece53b4cdcb900006c
+*****************************/
 function race(v1, v2, g) {
   if (v1 >= v2) return null
   const t = v2 - v1
@@ -2547,15 +3048,21 @@ function race(v1, v2, g) {
 }
 
 
-/* 6 kyu
-Find the Nth longest string in an Array} */
+/*****************************
+167.) Find the Nth longest string in an Array
+solved: 9/4/2022
+codewars.com/kata/5594c4599934000e1e00002e
+*****************************/
 const longest = (arr, n) => arr.map((v, i) => v = [v, i]).sort(
   (a, b) => a[0].length == b[0].length ? a[1] - b[1] : b[0].length - a[0].length
 )[n - 1][0]
 
 
-/* 6 kyu
-Inside Out Strings} */
+/*****************************
+168.) Inside Out Strings
+solved: 9/2/2022
+codewars.com/kata/57ebdf1c2d45a0ecd7002cd5
+*****************************/
 function insideOut(x){
   let str = x.split(" ")
   str = str.map((x) => {
@@ -2586,8 +3093,11 @@ function insideOut(x){
   return str.join(" ")
 }
 
-/* 6 kyu
-Separating Strings} */
+/*****************************
+169.) Separating Strings
+solved: 8/31/2022
+codewars.com/kata/5977ef1f945d45158d00011f
+*****************************/
 function sepStr(str) {
   str = str.split(" ").map(x => x.split(""))
   const row = str.length
@@ -2608,8 +3118,11 @@ function sepStr(str) {
 }
 
 
-/* 6 kyu
-Find the total white and black areas in a strange chessboard} */
+/*****************************
+170.) Find the total white and black areas in a strange chessboard
+solved: 8/31/2022
+codewars.com/kata/6262f9f7afc4729d8f5bef48
+*****************************/
 function whiteBlackAreas(cols, rows) {
   let [er, ec, or, oc] = [0,0,0,0]
   for (let i = 0; i < cols.length; i++) {
@@ -2620,8 +3133,11 @@ function whiteBlackAreas(cols, rows) {
 }
 
 
-/* 6 kyu
-Exclamation marks series #10: Remove some exclamation marks to keep the same number of exclamation marks at the beginning and end of each word} */
+/*****************************
+171.) Exclamation marks series #10: Remove some exclamation marks to keep the same number of exclamation marks at the beginning and end of each word
+solved: 8/30/2022
+codewars.com/kata/57fb04649610ce369a0006b8
+*****************************/
 function remove(s){
   const words = s.split(" ").map(x => x.replace(/[!=]/g, '').trim())
   s = s.split(" ")
@@ -2652,8 +3168,11 @@ function remove(s){
   return res.join(" ")
 }
 
-/* 6 kyu
-A String of Sorts} */
+/*****************************
+172.) A String of Sorts
+solved: 8/30/2022
+codewars.com/kata/536c6b8749aa8b3c2600029a
+*****************************/
 function sortString(string,ordering) {
   let order = []
   let xtra = ''
@@ -2668,8 +3187,11 @@ function sortString(string,ordering) {
   return [].concat(...res).filter(x=>typeof x == 'string').join("") + xtra
 }
 
-/* 6 kyu
-Sort Strings by Most Contiguous Vowels} */
+/*****************************
+173.) Sort Strings by Most Contiguous Vowels
+solved: 8/30/2022
+codewars.com/kata/5d2d0d34bceae80027bffddb
+*****************************/
 function sortStringsByVowels(s) {
   let vowCount = []
 
@@ -2708,8 +3230,11 @@ function sortStringsByVowels(s) {
 }
 
 
-/* 6 kyu
-String array duplicates} */
+/*****************************
+174.) String array duplicates
+solved: 8/30/2022
+codewars.com/kata/59f08f89a5e129c543000069
+*****************************/
 function dup(s) {
   let h = []
   const helper = (str) => {
@@ -2733,8 +3258,11 @@ function dup(s) {
   return h
 };
 
-/* 6 kyu
-CamelCase Method} */
+/*****************************
+175.) CamelCase Method
+solved: 8/29/2022
+codewars.com/kata/587731fda577b3d1b0001196
+*****************************/
 String.prototype.camelCase=function(){
   if (!this.length) return "";
   let str = this.trim().split(" ");
@@ -2742,8 +3270,11 @@ String.prototype.camelCase=function(){
 }
 
 
-/* 6 kyu
-Extract last names of people named Michael} */
+/*****************************
+176.) Extract last names of people named Michael
+solved: 8/29/2022
+codewars.com/kata/580741302e14acaef900015a
+*****************************/
 function getMichaelLastName(inp) {
 
   inp = inp.replace(/[^a-zA-Z]+/g, ' ').split(" ")
@@ -2757,8 +3288,11 @@ function getMichaelLastName(inp) {
 }
 
 
-/* 6 kyu
-Find the most frequently occurring elements in arrays} */
+/*****************************
+177.) Find the most frequently occurring elements in arrays
+solved: 8/29/2022
+codewars.com/kata/578b44a47c77f5a1bd000011
+*****************************/
 function getMostFrequent(json) {
   const freq = []
   const helper = (row) => {
@@ -2781,8 +3315,11 @@ function getMostFrequent(json) {
   return freq
 }
 
-/* 6 kyu
-search in multidimensional array} */
+/*****************************
+178.) search in multidimensional array
+solved: 8/29/2022
+codewars.com/kata/52840d2b27e9c932ff0016ae
+*****************************/
 var locate = function(arr,value){
   let idx = -20
   let len = arr.length
@@ -2790,8 +3327,11 @@ var locate = function(arr,value){
   return arr.indexOf(value) > -1
 }
 
-/* 6 kyu
-Update inventory in your smartphone store} */
+/*****************************
+179.) Update inventory in your smartphone store
+solved: 8/29/2022
+codewars.com/kata/57a31ce7cf1fa5a1e1000227
+*****************************/
 function updateInventory(curr, n) {
   let res = [], temp = []
   curr.concat(n).forEach((el) => {
@@ -2805,8 +3345,11 @@ function updateInventory(curr, n) {
   return res.sort((a, b) => a[1].localeCompare(b[1]))
 }
 
-/* 6 kyu
-Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details} */
+/*****************************
+180.) Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details
+solved: 8/29/2022
+codewars.com/kata/583d972b8bbc0402cf000121
+*****************************/
 function askForMissingDetails(list) {
   let res = []
   list.forEach((el) => {
@@ -2821,8 +3364,11 @@ function askForMissingDetails(list) {
 }
 
 
-/* 6 kyu
-Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse?} */
+/*****************************
+181.) Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse?
+solved: 8/28/2022
+codewars.com/kata/58381907f8ac48ae070000de
+*****************************/
 function isLanguageDiverse(list) {
   let chk = Array(3).fill(0)
   list.forEach((el) => {
@@ -2834,8 +3380,11 @@ function isLanguageDiverse(list) {
   return Math.max(...chk) / 2 <= Math.min(...chk) 
 }
 
-/* 6 kyu
-Coding Meetup #10 - Higher-Order Functions Series - Create usernames} */
+/*****************************
+182.) Coding Meetup #10 - Higher-Order Functions Series - Create usernames
+solved: 8/28/2022
+codewars.com/kata/582a53ed261c2af9d200018c
+*****************************/
 function addUsername(list) {
   const usernames = []
   list.forEach((el) => 
@@ -2850,43 +3399,61 @@ function addUsername(list) {
 }
 
 
-/* 6 kyu
-Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse?} */
+/*****************************
+183.) Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse?
+solved: 8/28/2022
+codewars.com/kata/5829ca646d02cd1a65000284
+*****************************/
 const isAgeDiverse = (list, a = Array(10).fill(false)) => {
   for (i of list) { i = "" + i.age, a[i.length > 2 ? +(i[0]+"0") : +(i[0])] = true } 
   return a.filter(Boolean).length == 10
 }
 
 
-/* 6 kyu
-Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?} */
+/*****************************
+184.) Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
+solved: 8/28/2022
+codewars.com/kata/58291fea7ff3f640980000f9
+*****************************/
 function allContinents(list) {
   return [...new Set(list.map(x => x.continent))].length === 5
 }
 
-/* 6 kyu
-Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer} */
+/*****************************
+185.) Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
+solved: 8/28/2022
+codewars.com/kata/582887f7d04efdaae3000090
+*****************************/
 const findSenior = (list, m=[]) => {
   for (a in list) { m.push(list[a].age) }
   return list.filter(x => x.age < Math.max(...m) ? '' : x)
 }
 
 
-/* 6 kyu
-Permute a Palindrome} */
+/*****************************
+186.) Permute a Palindrome
+solved: 8/28/2022
+codewars.com/kata/58ae6ae22c3aaafc58000079
+*****************************/
 const permuteAPalindrome = (inp, m=new Map) => {
   for (i of inp) { m.has(i) ? m.delete(i) : m.set(i) } return m.size<=1
 }
 
 
-/* 6 kyu
-Odd/Even number of divisors} */
+/*****************************
+187.) Odd/Even number of divisors
+solved: 8/28/2022
+codewars.com/kata/55830eec3e6b6c44ff000040
+*****************************/
 function oddity(n) {
   return Math.sqrt(n)%1===0?'odd':'even'
 }
 
-/* 6 kyu
-Simple Fun #52: Pair Of Shoes} */
+/*****************************
+188.) Simple Fun #52: Pair Of Shoes
+solved: 8/27/2022
+codewars.com/kata/58885a7bf06a3d466e0000e3
+*****************************/
 function pairOfShoes(shoes) {
   const helper = (arr, val) => arr.reduce((a, c) => c[0] === val ? a + c[1] : a, 0)
   let [a, b] = [helper(shoes, 0), helper(shoes, 1)]
@@ -2894,8 +3461,11 @@ function pairOfShoes(shoes) {
 }
 
 
-/* 6 kyu
-Count the smiley faces!} */
+/*****************************
+189.) Count the smiley faces!
+solved: 8/27/2022
+codewars.com/kata/583203e6eb35d7980400002a
+*****************************/
 function countSmileys(arr) {
   
   let eyes = [':', ';'],
@@ -2916,8 +3486,11 @@ function countSmileys(arr) {
   return count
 }
 
-/* 6 kyu
-The Deaf Rats of Hamelin} */
+/*****************************
+190.) The Deaf Rats of Hamelin
+solved: 8/27/2022
+codewars.com/kata/598106cb34e205e074000031
+*****************************/
 var countDeafRats = function (town) {
 
   town = town.replace(/\s+/g, '')
@@ -2948,8 +3521,11 @@ var countDeafRats = function (town) {
   return r
 }
 
-/* 6 kyu
-Build Tower} */
+/*****************************
+191.) Build Tower
+solved: 8/27/2022
+codewars.com/kata/576757b1df89ecf5bd00073b
+*****************************/
 function towerBuilder(nFloors) {
   let res = []
   let n1 = " "
@@ -2963,8 +3539,11 @@ function towerBuilder(nFloors) {
 }
 
 
-/* 6 kyu
-Split and Join} */
+/*****************************
+192.) Split and Join
+solved: 8/27/2022
+codewars.com/kata/5816ead8dae5a59eaa000053
+*****************************/
 function split(arr) {
   return [[].concat(...arr), arr.map(x => x ? [x.length] : '')]
 }
@@ -2979,8 +3558,11 @@ function join(arr1, arr2) {
 }
 
 
-/* 6 kyu
-Turn String Input into Hash} */
+/*****************************
+193.) Turn String Input into Hash
+solved: 8/23/2022
+codewars.com/kata/52180ce6f626d55cf8000071
+*****************************/
 function strToHash(str) {
   if (!str) return {}
   let hash = {}
@@ -2994,8 +3576,11 @@ function strToHash(str) {
 }
 
 
-/* 6 kyu
-String tops} */
+/*****************************
+194.) String tops
+solved: 8/23/2022
+codewars.com/kata/59b7571bbf10a48c75000070
+*****************************/
 function tops(msg) {
   let arr = [1]
   for (let i = 6, j = 5; i < msg.length; i += j + 4, j += 4) {
@@ -3005,8 +3590,11 @@ function tops(msg) {
 }
 
 
-/* 6 kyu
-Begin your day with a challenge, but an easy one.} */
+/*****************************
+195.) Begin your day with a challenge, but an easy one.
+solved: 8/22/2022
+codewars.com/kata/5873b2010565844b9100026d
+*****************************/
 function oneTwoThree(n) {
   let b = Array(n).fill(1).join("")
   if (n === 0) return ["0", "0"]
@@ -3014,8 +3602,11 @@ function oneTwoThree(n) {
 }
 
 
-/* 6 kyu
-Catalog} */
+/*****************************
+196.) Catalog
+solved: 8/22/2022
+codewars.com/kata/59d9d8cb27ee005972000045
+*****************************/
 function catalog(s, article) {
   s = s.split("<prod>")
   let arr = []
@@ -3044,8 +3635,11 @@ function catalog(s, article) {
   return arr.length ? arr.join("\r\n") : "Nothing"
 }
 
-/* 6 kyu
-Strings, strings, strings (Hard)} */
+/*****************************
+197.) Strings, strings, strings (Hard)
+solved: 8/20/2022
+codewars.com/kata/56d9439813f38853b40000e4
+*****************************/
 Array.prototype.toString = function () {
   let str = ''
   for (let i = 0; i < this.length; i++) {
@@ -3060,8 +3654,11 @@ Array.prototype.toString = function () {
   return str.length == 0 ? '[' + '' + ']' : str
 }
 
-/* 6 kyu
-Meeting} */
+/*****************************
+198.) Meeting
+solved: 8/20/2022
+codewars.com/kata/59df2f8f08c6cec835000012
+*****************************/
 function meeting(s) {
   s = s.split(";").map((x) => x.split(":")).sort((a, b) => {
     let x;
@@ -3076,8 +3673,11 @@ function meeting(s) {
   return res.join("")
 }
 
-/* 6 kyu
-Unknown amount of duplicates. One missing number.} */
+/*****************************
+199.) Unknown amount of duplicates. One missing number.
+solved: 8/17/2022
+codewars.com/kata/5a5cdb07fd56cbdd3c00005b
+*****************************/
 function findDupsMiss(arr) {
   let h = []
   let d = []
@@ -3097,8 +3697,11 @@ function findDupsMiss(arr) {
   return [(len * (m + (m - len + 1)) / 2) - total, d.sort((a, b) => a - b)]
 }
 
-/* 6 kyu
-Check if two words are isomorphic to each other} */
+/*****************************
+200.) Check if two words are isomorphic to each other
+solved: 8/10/2022
+codewars.com/kata/59dbab4d7997cb350000007f
+*****************************/
 function isomorph(a, b) {
   if (!a || !b) return false
   const helper = arr => {
@@ -3107,8 +3710,11 @@ function isomorph(a, b) {
   return helper(b) == helper(a)
 }
 
-/* 6 kyu
-Validate Credit Card Number} */
+/*****************************
+201.) Validate Credit Card Number
+solved: 8/8/2022
+codewars.com/kata/5418a1dd6d8216e18a0012b2
+*****************************/
 function validate(card) {
   let arr = [...""+card].reverse().map((x, i) => i % 2 != 0 ? +x * 2 : +x)
   let r = []
@@ -3116,8 +3722,11 @@ function validate(card) {
   return r.reduce((a,c)=> a+c, 0) % 10 == 0
 }
 
-/* 6 kyu
-Who has the most money?} */
+/*****************************
+202.) Who has the most money?
+solved: 8/8/2022
+codewars.com/kata/528d36d7cc451cd7e4000339
+*****************************/
 function mostMoney(students, r = []) {
   students.forEach((s) => {
     r.push((s.fives * 5) + (s.tens * 10) + (s.twenties * 20))
@@ -3127,8 +3736,11 @@ function mostMoney(students, r = []) {
   return r.length === 1 ? students[0].name : checkAll ? "all" : students[i].name
 }
 
-/* 6 kyu
-Mix Fruit Juice} */
+/*****************************
+203.) Mix Fruit Juice
+solved: 8/8/2022
+codewars.com/kata/5905871c00881d0e85000015
+*****************************/
 function mixFruit (arr) {
 
   arr = arr.map(x => x.toLowerCase())
@@ -3149,8 +3761,11 @@ function mixFruit (arr) {
   return Math.round(m / arr.length)
 }
 
-/* 6 kyu
-Fruit Machine} */
+/*****************************
+204.) Fruit Machine
+solved: 8/8/2022
+codewars.com/kata/590adadea658017d90000039
+*****************************/
 function fruit(reels, spins) {
   let items = ["Jack","Queen","King","Bar","Cherry","Seven","Shell","Bell","Star","Wild"],
       three = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
@@ -3179,8 +3794,11 @@ function fruit(reels, spins) {
   return scores.includes(10) && dub !== 10 ? distribute(twoPlus) : distribute(two)
 }
 
-/* 6 kyu
-Character counts} */
+/*****************************
+205.) Character counts
+solved: 8/8/2022
+codewars.com/kata/56b409febccd5aafbd000021
+*****************************/
 /**
  * Returns the number of times the given character appears in the string,
  * or if more than one character is supplied an array of character counts.
@@ -3200,8 +3818,11 @@ String.prototype.characterCount = function (chars) {
   return res.length === 1 ? res[0] : res
 };
 
-/* 6 kyu
-N-th Fibonacci} */
+/*****************************
+206.) N-th Fibonacci
+solved: 8/8/2022
+codewars.com/kata/522551eee9abb932420004a0
+*****************************/
 function nthFibo(n) {
   const nth = n;
   let a = 1
@@ -3219,8 +3840,11 @@ function nthFibo(n) {
   return [0].concat(r)[nth - 1]
 }
 
-/* 6 kyu
-Array Deep Count} */
+/*****************************
+207.) Array Deep Count
+solved: 8/7/2022
+codewars.com/kata/596f72bbe7cd7296d1000029
+*****************************/
 function deepCount(a){
   let t = a.length
   for (let i = 0; i < a.length; i++) {
@@ -3231,8 +3855,11 @@ function deepCount(a){
   return t
 }
 
-/* 6 kyu
-A Memory game array} */
+/*****************************
+208.) A Memory game array
+solved: 8/7/2022
+codewars.com/kata/55437532b73f053bac000096
+*****************************/
 function createTiles(n){
   if (n % 2 !== 0) { return [] }
   let arr = []
@@ -3244,8 +3871,11 @@ function createTiles(n){
   return arr.sort(() => Math.random() - 0.5)  
 }
 
-/* 6 kyu
-Selective memory} */
+/*****************************
+209.) Selective memory
+solved: 8/7/2022
+codewars.com/kata/58bee820e9f98b215200007c
+*****************************/
 function select(memory){
   memory = memory.split(", ")
   let idx = []
@@ -3272,8 +3902,11 @@ function select(memory){
   return res.join(", ")
 }
 
-/* 6 kyu
-Special Multiples} */
+/*****************************
+210.) Special Multiples
+solved: 8/7/2022
+codewars.com/kata/55e785dfcb59864f200000d9
+*****************************/
 function countSpecMult(n, mxval) {
   const isPrime = num => {
     let sq = Math.floor(Math.sqrt(num))
@@ -3295,13 +3928,19 @@ function countSpecMult(n, mxval) {
   return Math.floor(mxval/k)
 }
 
-/* 6 kyu
-One line task: Square Every Digit} */
+/*****************************
+211.) One line task: Square Every Digit
+solved: 8/2/2022
+codewars.com/kata/5acd142a2ec8c48521000104
+*****************************/
 sd=x=>+[...""+x].map(n=>n*n).join``
 
 
-/* 6 kyu
-"Stringing"+"Me"+"Along"} */
+/*****************************
+212.) "Stringing"+"Me"+"Along"
+solved: 8/2/2022
+codewars.com/kata/55f4a44eb72a0fa91600001e
+*****************************/
 function createMessage () {
   let args = [...arguments][0]
   function m() {
@@ -3312,8 +3951,11 @@ function createMessage () {
   return m
 }
 
-/* 6 kyu
-Training Random Testcases #1: Fizz Buzz} */
+/*****************************
+213.) Training Random Testcases #1: Fizz Buzz
+solved: 8/2/2022
+codewars.com/kata/57980be93467db22f5000038
+*****************************/
 function randomNumber() {
   const r = Math.ceil(Math.random() * 100) <= 80;
   
@@ -3346,8 +3988,11 @@ function wrongSolution1(n){
   return n==3?"Fizz":n==5?"Buzz":n==15?"Fizz Buzz":n
 }
 
-/* 6 kyu
-Find the Nexus of the Codewars Universe} */
+/*****************************
+214.) Find the Nexus of the Codewars Universe
+solved: 8/2/2022
+codewars.com/kata/5453dce502949307cf000bff
+*****************************/
 const nexus = (users, r = []) => {
   for (let [k, v] of Object.entries(users)) { 
     r.push(Math.abs(+k - v)) 
@@ -3355,8 +4000,11 @@ const nexus = (users, r = []) => {
   return +(Object.keys(users)[r.indexOf(Math.min(...r))])
 }
 
-/* 6 kyu
-Adjacent repeated words in a string} */
+/*****************************
+215.) Adjacent repeated words in a string
+solved: 8/1/2022
+codewars.com/kata/5245a9138ca049e9a10007b8
+*****************************/
 function countAdjacentPairs(s) {
   if (!s.length) { return 0 }
   s = s.toLowerCase().split(" ")
@@ -3369,14 +4017,20 @@ function countAdjacentPairs(s) {
   return a.length
 }
 
-/* 6 kyu
-IPv4 to int32} */
+/*****************************
+216.) IPv4 to int32
+solved: 8/1/2022
+codewars.com/kata/52ea928a1ef5cfec800003ee
+*****************************/
 function ipToInt32(ip){
   return ip.split(".").reduce((a,c)=> +a * 256 + +c, 0)
 }
 
-/* 6 kyu
-Pyramid Array} */
+/*****************************
+217.) Pyramid Array
+solved: 8/1/2022
+codewars.com/kata/515f51d438015969f7000013
+*****************************/
 function pyramid(n) {
   let res = []
   for (let i = 0; i < n; i++) {
@@ -3385,8 +4039,11 @@ function pyramid(n) {
   return res
 }
 
-/* 6 kyu
-Count words} */
+/*****************************
+218.) Count words
+solved: 8/1/2022
+codewars.com/kata/56b3b27cadd4ad275500000c
+*****************************/
 function wordCount(s) {
   s = s.split(/[^a-zA-Z]/ig)
   return s.filter((a) => {
@@ -3397,8 +4054,11 @@ function wordCount(s) {
   }).length
 }
 
-/* 6 kyu
-Change it up} */
+/*****************************
+219.) Change it up
+solved: 8/1/2022
+codewars.com/kata/58039f8efca342e4f0000023
+*****************************/
 function changer(str) { 
   return [...str].map((x) => {
     let cc = 0
@@ -3423,8 +4083,11 @@ function changer(str) {
   }).join("")
 }
 
-/* 6 kyu
-The Supermarket Queue} */
+/*****************************
+220.) The Supermarket Queue
+solved: 8/1/2022
+codewars.com/kata/57b06f90e298a7b53d000a86
+*****************************/
 function queueTime(customers, n) {
   const curr = Array(n).fill(0)
   for (let acc of customers) {
@@ -3433,8 +4096,11 @@ function queueTime(customers, n) {
   return Math.max(...curr)
 }
 
-/* 6 kyu
-Message Validator} */
+/*****************************
+221.) Message Validator
+solved: 7/31/2022
+codewars.com/kata/5fc7d2d2682ff3000e1a3fbc
+*****************************/
 function isAValidMessage(message){
 
   let a = message.split(/([0-9]+)/).slice(1)
@@ -3454,8 +4120,11 @@ function isAValidMessage(message){
 }
 
 
-/* 6 kyu
-Find the missing letter} */
+/*****************************
+222.) Find the missing letter
+solved: 7/31/2022
+codewars.com/kata/5839edaa6754d6fec10000a2
+*****************************/
 function findMissingLetter(a) {
   a=a.join("")
   let res = 0
@@ -3467,8 +4136,11 @@ function findMissingLetter(a) {
   return String.fromCharCode(res)
 }
 
-/* 6 kyu
-Is a number prime?} */
+/*****************************
+223.) Is a number prime?
+solved: 7/31/2022
+codewars.com/kata/5262119038c0985a5b00029f
+*****************************/
 function isPrime(num) {
   let sq = Math.floor(Math.sqrt(num))
   for (let i = 2; i <= sq; i++) {
@@ -3478,15 +4150,21 @@ function isPrime(num) {
 }
 
 
-/* 6 kyu
-Decode the Morse code} */
+/*****************************
+224.) Decode the Morse code
+solved: 7/31/2022
+codewars.com/kata/54b724efac3d5402db00065e
+*****************************/
 decodeMorse = function (morseCode) {
   morseCode = morseCode.trim().split(" ").map((el) => MORSE_CODE[el] || ' ')
   return morseCode.join("").replace(/\s+/g, ' ')
 }
 
-/* 6 kyu
-Find the unique number} */
+/*****************************
+225.) Find the unique number
+solved: 5/13/2022
+codewars.com/kata/585d7d5adb20cf33cb000235
+*****************************/
 function findUniq(arr) {
   let count = {};
   for (const num of arr) {
@@ -3499,8 +4177,11 @@ function findUniq(arr) {
   }
 }
 
-/* 6 kyu
-Kebabize} */
+/*****************************
+226.) Kebabize
+solved: 7/30/2022
+codewars.com/kata/57f8ff867a28db569e000c4a
+*****************************/
 function kebabize(str) {
 
   str = str.replace(/[^a-zA-Z]/g, '')
@@ -3515,8 +4196,11 @@ function kebabize(str) {
   return res[0] === "-" ? res.slice(1) : res
 }
 
-/* 6 kyu
-+1 Array} */
+/*****************************
+227.) +1 Array
+solved: 7/30/2022
+codewars.com/kata/5514e5b77e6b2f38e0000ca9
+*****************************/
 function upArray(arr) {
   let i = arr.length - 1
   const hasNegative = arr.some((x) => x<0 || x>9 || typeof x !== "number")
@@ -3535,8 +4219,11 @@ function upArray(arr) {
   return arr
 }
 
-/* 6 kyu
-Lock and Key} */
+/*****************************
+228.) Lock and Key
+solved: 7/29/2022
+codewars.com/kata/53c2a84a1dfa43a7e40005ba
+*****************************/
 class Lock {
   constructor() {
     this.keys = [];
@@ -3558,8 +4245,11 @@ class Lock {
 
 }
 
-/* 6 kyu
-Two Sum} */
+/*****************************
+229.) Two Sum
+solved: 7/22/2022
+codewars.com/kata/52c31f8e6605bcc646000082
+*****************************/
 function twoSum(numbers, target) {
   let res = []
   for (let i = 0; i < numbers.length; i++) {
@@ -3573,8 +4263,11 @@ function twoSum(numbers, target) {
   }
 }
 
-/* 6 kyu
-Reverse every other word in the string} */
+/*****************************
+230.) Reverse every other word in the string
+solved: 7/22/2022
+codewars.com/kata/58d76854024c72c3e20000de
+*****************************/
 function reverse(str) {
   if (!str) {return '';}
 
@@ -3594,8 +4287,11 @@ function reverse(str) {
   return res.join(" ")
 }
 
-/* 6 kyu
-Sum consecutives} */
+/*****************************
+231.) Sum consecutives
+solved: 7/22/2022
+codewars.com/kata/55eeddff3f64c954c2000059
+*****************************/
 function sumConsecutives(s) {
   let res = []
   let temp = 0
@@ -3612,8 +4308,11 @@ function sumConsecutives(s) {
   return res
 }
 
-/* 6 kyu
-Make the Deadfish Swim} */
+/*****************************
+232.) Make the Deadfish Swim
+solved: 7/22/2022
+codewars.com/kata/51e0007c1f9378fa810002a9
+*****************************/
 function parse(data) {
   let val = 0
   let res = []
@@ -3633,8 +4332,11 @@ function parse(data) {
   return res
 }
 
-/* 6 kyu
-Pair of gloves} */
+/*****************************
+233.) Pair of gloves
+solved: 7/22/2022
+codewars.com/kata/58235a167a8cb37e1a0000db
+*****************************/
 function numberOfPairs(gloves) {
   let getPairs = []
   let res = 0
@@ -3657,8 +4359,11 @@ function numberOfPairs(gloves) {
   return res
 }
 
-/* 6 kyu
-Sums of Parts} */
+/*****************************
+234.) Sums of Parts
+solved: 7/21/2022
+codewars.com/kata/5ce399e0047a45001c853c2b
+*****************************/
 function partsSums(ls) {
   let curr = ls.reduce((a, c) => a + c, 0)
 
@@ -3671,8 +4376,11 @@ function partsSums(ls) {
   return res
 }
 
-/* 6 kyu
-Multiplication table} */
+/*****************************
+235.) Multiplication table
+solved: 7/21/2022
+codewars.com/kata/534d2f5b5371ecf8d2000a08
+*****************************/
 multiplicationTable = function(size) {
   let res = []
   let curr = 0,
@@ -3692,8 +4400,11 @@ multiplicationTable = function(size) {
   return res
 }
 
-/* 6 kyu
-Backspaces in string} */
+/*****************************
+236.) Backspaces in string
+solved: 7/21/2022
+codewars.com/kata/5727bb0fe81185ae62000ae3
+*****************************/
 function cleanString(s) {
   let res = ''
   for (let i = 0; i < s.length; i++) {
@@ -3706,8 +4417,11 @@ function cleanString(s) {
   return res
 }
 
-/* 6 kyu
-Collatz} */
+/*****************************
+237.) Collatz
+solved: 7/18/2022
+codewars.com/kata/5286b2e162056fd0cb000c20
+*****************************/
 function collatz(n) {
   let res = `${n}`
   while (n > 1) {
@@ -3721,8 +4435,11 @@ function collatz(n) {
   return res
 }
 
-/* 6 kyu
-"this" is an other solution} */
+/*****************************
+238.) "this" is an other solution
+solved: 6/25/2022
+codewars.com/kata/54834b3559e638b39d0009a2
+*****************************/
 function OnceNamedOne(first, last) {
   this.firstName = first;
   this.lastName = last;
@@ -3730,8 +4447,11 @@ function OnceNamedOne(first, last) {
   Object.freeze(this);
 }
 
-/* 6 kyu
-"this" is an other problem} */
+/*****************************
+239.) "this" is an other problem
+solved: 6/25/2022
+codewars.com/kata/547f1a8d4a437abdf800055c
+*****************************/
 class NamedOne {
   constructor(first, last) {
     this.firstName = first;
@@ -3751,8 +4471,11 @@ class NamedOne {
   }
 }
 
-/* 6 kyu
-Equal Sides Of An Array} */
+/*****************************
+240.) Equal Sides Of An Array
+solved: 6/18/2022
+codewars.com/kata/5679aa472b8f57fb8c000047
+*****************************/
 function findEvenIndex(arr) {
   let target = arr.reduce((a, c) => a + c, 0)
   let min = 0;
@@ -3768,8 +4491,11 @@ function findEvenIndex(arr) {
   return -1
 }
 
-/* 6 kyu
-Simple frequency sort} */
+/*****************************
+241.) Simple frequency sort
+solved: 6/18/2022
+codewars.com/kata/5a8d2bf60025e9163c0000bc
+*****************************/
 function solve(arr){
   let res = {}
   for (let n of arr) {
@@ -3779,8 +4505,11 @@ function solve(arr){
   return arr.slice().sort((a, b) => res[b] - res[a] || a - b)
 }
 
-/* 6 kyu
-Write Number in Expanded Form - Part 2} */
+/*****************************
+242.) Write Number in Expanded Form - Part 2
+solved: 6/18/2022
+codewars.com/kata/58cda88814e65627c5000045
+*****************************/
 function expandedForm(num) {
 
   num = num.toString().split(".");
@@ -3804,8 +4533,11 @@ function expandedForm(num) {
   return res.slice(0, res.length - 3);
 }
 
-/* 6 kyu
-Write Number in Expanded Form} */
+/*****************************
+243.) Write Number in Expanded Form
+solved: 6/18/2022
+codewars.com/kata/5842df8ccbd22792a4000245
+*****************************/
 function expandedForm(num) {
   num = num.toString();
   let res = '';
@@ -3818,8 +4550,11 @@ function expandedForm(num) {
 }
 
 
-/* 6 kyu
-Take a Ten Minutes Walk} */
+/*****************************
+244.) Take a Ten Minutes Walk
+solved: 6/18/2022
+codewars.com/kata/54da539698b8a2ad76000228
+*****************************/
 function isValidWalk(walk) {
   let grid = {n:0, s:0, w:0, e:0, t:0}
   let total = 0;
@@ -3833,8 +4568,11 @@ function isValidWalk(walk) {
 }
 
 
-/* 6 kyu
-Persistent Bugger.} */
+/*****************************
+245.) Persistent Bugger.
+solved: 6/16/2022
+codewars.com/kata/55bf01e5a717a0d57e0000ec
+*****************************/
 function persistence(num) {
   num = num.toString()
   let count = 0
@@ -3845,8 +4583,11 @@ function persistence(num) {
   return count
 }
 
-/* 6 kyu
-Detect Pangram} */
+/*****************************
+246.) Detect Pangram
+solved: 6/16/2022
+codewars.com/kata/545cedaa9943f7fe7b000048
+*****************************/
 function isPangram(string){
   let res = []
   string = string.split(" ").join("").toLowerCase()
@@ -3859,8 +4600,11 @@ function isPangram(string){
   return res.reduce((a, c) => a - c, 2847) == 0
 }
 
-/* 6 kyu
-Does my number look big in this?} */
+/*****************************
+247.) Does my number look big in this?
+solved: 6/12/2022
+codewars.com/kata/5287e858c6b5a9678200083c
+*****************************/
 function narcissistic(n) {
   let len = n.toString().length
   let res = 0
@@ -3870,8 +4614,11 @@ function narcissistic(n) {
   return res == n
 }
 
-/* 6 kyu
-Prime Primes} */
+/*****************************
+248.) Prime Primes
+solved: 6/12/2022
+codewars.com/kata/57ba58d68dcd97e98c00012b
+*****************************/
 function primePrimes(n) {
 
   const isPrime = n => {
@@ -3896,8 +4643,11 @@ function primePrimes(n) {
   return [count, Math.floor(total)]
 }
 
-/* 6 kyu
-Simple Substitution Cipher Helper} */
+/*****************************
+249.) Simple Substitution Cipher Helper
+solved: 6/12/2022
+codewars.com/kata/52eb114b2d55f0e69800078d
+*****************************/
 function SubstitutionCipher(abc1, abc2) {
   this.cipher = function (curr, s1, s2) {
     let idx = []
@@ -3918,8 +4668,11 @@ function SubstitutionCipher(abc1, abc2) {
   }
 }
 
-/* 6 kyu
-Are they the "same"?} */
+/*****************************
+250.) Are they the "same"?
+solved: 2/27/2022
+codewars.com/kata/550498447451fbbd7600041c
+*****************************/
 function comp(a1, a2){
   if (!Array.isArray(a1) || !Array.isArray(a2)) return false;
   a1 = a1.sort((a, b) => a - b);
@@ -3930,8 +4683,11 @@ function comp(a1, a2){
   return true;
 }
 
-/* 6 kyu
-Convert string to camel case} */
+/*****************************
+251.) Convert string to camel case
+solved: 6/10/2022
+codewars.com/kata/517abf86da9663f1d2000003
+*****************************/
 function toCamelCase(str){
   if (!str) return '';
   str = str.replace(/[^\pA-Za-z']/g, ' ')
@@ -3946,8 +4702,11 @@ function toCamelCase(str){
   return str[0] += res.split(" ").join("")
 }
 
-/* 6 kyu
-Length of missing array} */
+/*****************************
+252.) Length of missing array
+solved: 6/10/2022
+codewars.com/kata/57b6f5aadb5b3d0ae3000611
+*****************************/
 function getLengthOfMissingArray(aoa) {
   if (!aoa || aoa.some(v => !v)) return 0;
   let t = [] //length of each arr
@@ -3968,8 +4727,11 @@ function getLengthOfMissingArray(aoa) {
   }
 }
 
-/* 6 kyu
-Run-length encoding} */
+/*****************************
+253.) Run-length encoding
+solved: 6/10/2022
+codewars.com/kata/546dba39fa8da224e8000467
+*****************************/
 var runLengthEncoding = function(str){
   let arr = []
   let i = 0;
@@ -3984,8 +4746,11 @@ var runLengthEncoding = function(str){
   return arr
 }
 
-/* 6 kyu
-Playing with digits} */
+/*****************************
+254.) Playing with digits
+solved: 6/10/2022
+codewars.com/kata/5552101f47fc5178b1000050
+*****************************/
 function digPow(n, p){
   nums = n.toString()
   let x = 0
@@ -3997,428 +4762,513 @@ function digPow(n, p){
   return x/n % 1 === 0 ? x/n : -1
 }
 
-/* 6 kyu
-Loose Change} */
-function looseChange(cents) {
+/*
+6kyu
+1.) Parse HTML/CSS Colors (codewars.com/kata/58b57ae2724e3c63df000006)
 
-  let changeMachine = { Nickels: 0, Pennies: 0, Dimes: 0, Quarters: 0 };
-  if (cents <= 0) return changeMachine;
+2.) Extract the contents of a given tag from the HTML document (codewars.com/kata/5808ce703e55743db7000d92)
 
-  let c = 0;
-  if (/[\.]/.test(String(cents)) == true) {
-    c += parseInt(cents);
-  } else {
-    c += cents;
-  }
+3.) Palindrome for your Dome (codewars.com/kata/53046ceefe87e4905e00072a)
 
-  changeMachine.Quarters = Math.floor(c / 25);
-  changeMachine.Dimes = Math.floor(c % 25 / 10);
-  changeMachine.Nickels = Math.floor(c % 25 % 10 / 5);
-  changeMachine.Pennies = Math.floor(c % 25 % 10 % 5);
-  return changeMachine;
+4.) PatternCraft - Strategy (codewars.com/kata/5682e809386707366d000024)
 
-}
+5.) PatternCraft - Decorator (codewars.com/kata/5682e545fb263ecf7b000069)
 
-/* 6 kyu
-Replace With Alphabet Position} */
-function alphabetPosition(text) {
-  text = text.toLowerCase().replace(/[^a-z]/g, '');
-  let res = [];
-  for (let i = 0; i < text.length; i++) {
-    res.push(text.charCodeAt(i) - 96);
-  }
-  return res.join(" ");
-}
+6.) PatternCraft - State (codewars.com/kata/5682e72eb7354b2f39000021)
 
-/* 6 kyu
-Duplicate Encoder} */
-function duplicateEncode(word) {
-  word = word.toLowerCase().split("");
+7.) Binary string (codewars.com/kata/52654ea8e218b83553000666)
 
-  const map = word.reduce((a, c) => {
-    a[c] = ++a[c] || 1;
-    return a;
-  }, {});
+8.) Latin Square Validator (codewars.com/kata/646254375cee7a000ffaa404)
 
-  const helper = freq => map[freq] > 1 ? ')' : '(';
-  return word.map(helper).join("");
-}
+9.) Mad Max: Recursion Road (codewars.com/kata/57bd0abcb9799763f1001bdc)
 
-/* 6 kyu
-Count characters in your string} */
-function count (string) {  
-  return string.split("").reduce((a, c) => (a[c] = (a[c] || 0) + 1, a), {});
-}
+10.) Numericals of a String (codewars.com/kata/5b4070144d7d8bbfe7000001)
 
-/* 6 kyu
-Filling an array (part 2)} */
-// squares
-const squares = n => {
-  let res = []
-  for (let i = 1; i <= n; i++) {
-    res.push(i ** 2)
-  }
-  return res
-}
+11.) Replace letters (codewars.com/kata/5a4331b18f27f2b31f000085)
 
-// range
-const range = (n, start, step) => {
-  let res = [start];
-  for (let i = 0; i < n - 1; i++) {
-    res.push(start += step)
-  }
-  return res
-}
+12.) Card game (codewars.com/kata/5a3141fe55519e04d90009d8)
 
-// random
-const random = (n, min, max) => {
-  function r(min, max) {
-    return Math.round(Math.random() * (max - min)) + min
-  }
-  return Array.from({length: n }, $ => r(min, max))
-}
+13.) Break camelCase (codewars.com/kata/5208f99aee097e6552000148)
 
-// primes
-const primes = n => {
-  let arr = []
-  let i = 2
-  while (arr.length < n) {
-    if (isPrime(i)) {
-      arr.push(i)
-    }
-    i++
-  }
+14.) Simple Encryption #1 - Alternating Split (codewars.com/kata/57814d79a56c88e3e0000786)
 
-  function isPrime(num) {
-    if (num < 2) return false;
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) {
-        return false
-      }
-    }
-    return true
-  };
-  return arr
-}
+15.) Keyword Cipher Helper (codewars.com/kata/535c1c80cdbf5011e600030f)
 
+16.) longest_palindrome (codewars.com/kata/54bb6f887e5a80180900046b)
 
-/* 6 kyu
-Loose Change} */
-function looseChange(cents) {
+17.) Valid Phone Number (codewars.com/kata/525f47c79f2f25a4db000025)
 
-  let changeMachine = { Nickels: 0, Pennies: 0, Dimes: 0, Quarters: 0 };
-  if (cents <= 0) return changeMachine;
+18.) Sentence Calculator (codewars.com/kata/5970fce80ed776b94000008b)
 
-  let c = 0;
-  if (/[\.]/.test(String(cents)) == true) {
-    c += parseInt(cents);
-  } else {
-    c += cents;
-  }
+19.) Cambridge Word Scramble (codewars.com/kata/564e48ebaaad20181e000024)
 
-  changeMachine.Quarters = Math.floor(c / 25);
-  changeMachine.Dimes = Math.floor(c % 25 / 10);
-  changeMachine.Nickels = Math.floor(c % 25 % 10 / 5);
-  changeMachine.Pennies = Math.floor(c % 25 % 10 % 5);
-  return changeMachine;
+20.) Shortest code: Father and Son (codewars.com/kata/56f928b19982cc7a14000c9d)
 
-}
+21.) ■□ Pattern □■ : Snake (codewars.com/kata/56e2ede2c92c6cb1370012ba)
 
-/* 6 kyu
-Replace With Alphabet Position} */
-function alphabetPosition(text) {
-  text = text.toLowerCase().replace(/[^a-z]/g, '');
-  let res = [];
-  for (let i = 0; i < text.length; i++) {
-    res.push(text.charCodeAt(i) - 96);
-  }
-  return res.join(" ");
-}
+22.) Simple Fun #23: Square Digits Sequence (codewars.com/kata/5886d65e427c27afeb0000c1)
 
-/* 6 kyu
-Duplicate Encoder} */
-function duplicateEncode(word) {
-  word = word.toLowerCase().split("");
+23.) Sort two arrays (codewars.com/kata/5818c52e21a33314e00000cb)
 
-  const map = word.reduce((a, c) => {
-    a[c] = ++a[c] || 1;
-    return a;
-  }, {});
+24.) Join Two Arrays by Id (codewars.com/kata/6481c68ffdf80b6147d85248)
 
-  const helper = freq => map[freq] > 1 ? ')' : '(';
-  return word.map(helper).join("");
-}
+25.) Find The Parity Outlier (codewars.com/kata/5526fc09a1bbd946250002dc)
 
-/* 6 kyu
-Count characters in your string} */
-function count (string) {  
-  return string.split("").reduce((a, c) => (a[c] = (a[c] || 0) + 1, a), {});
-}
+26.) Node.js Async I/O (codewars.com/kata/542106e2dda52658bf00001a)
 
-/* 6 kyu
-Your order, please} */
-function order(words) {
-  words = words.split(" ")
-  let res = [];
-  for (let i = 0; i <= words.length; i++) {
-    for (let j = 0; j < words.length; j++) {
-      if (words[j].includes(i)) {
-        res.push(words[j]);
-      }
-    }
-  }
-  return res.join(" ");
-}
+27.) Caesar Cipher Encryption - Variation (codewars.com/kata/55ec55323c89fc5fbd000019)
 
-/* 6 kyu
-Arrays Similar} */
-function arraysSimilar(a1, a2) {
+28.) Secret Message (codewars.com/kata/54808e45ab03a2c8330009fb)
 
-  if (!a1 || !a2) return false;
-  if (a1.length != a2.length) return false;
-  
-  // concat and check types
-  let qc = a1.concat(a2);
-  qc = qc.every((val, i, qc) => typeof val === typeof qc[0]);
-  if (qc == false) return false;
-  else 
-  
-  // bubble
-  function b(a) {
-    for (let i = 0; i < a.length; i++) {
-      for (let j = 0; j < a.length; j++) {
-        if (a[j] > a[j + 1]) {
-          [a[j+1], a[j]] = [a[j], a[j+1]];
-        }
-      }
-    }
-    return a;
-  }
+29.) Find the missing term in an Arithmetic Progression (codewars.com/kata/52de553ebb55d1fca3000371)
 
-  // iterate through sorted elements
-  let x = b(a1), y = b(a2);
-  function check(x, y) {
-    for (let i = 0; i < x.length; i++) {
-      if (x[i] !== y[i]) return false;
-    }
-    return true;
-  }
-  return check(x, y);
-}
+30.) Sum two arrays (codewars.com/kata/59c3e8c9f5d5e40cab000ca6)
 
-/* 6 kyu
-Where is my parent!?(cry)} */
-function compare(a, b) {
-  if (a.toLowerCase() !== b.toLowerCase()) {
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-  }
-  return a > b ? 1 : (a < b ? -1 : 0);
-}
+31.) Balanced Braces (with non-brace characters) (codewars.com/kata/5a62173ee626c5f0e40000e9)
 
-function findChildren(dancingBrigade) {
-  return dancingBrigade.split("").sort(compare).join("")
-}
+32.) Find match row and column position in a given string (codewars.com/kata/58fae1eb2bffa7a570000039)
 
-/* 6 kyu
-Unique In Order} */
-var uniqueInOrder=function(iterable){
-  let res = [];
-  for (let i = 0; i < iterable.length; i++) {
-    if (iterable[i - 1] !== iterable[i]) {
-      res.push(iterable[i]);
-    }
-  }
-  return res;
-}
+33.) Roman Numerals Encoder (codewars.com/kata/51b62bf6a9c58071c600001b)
 
-/* 6 kyu
-Sort the odd} */
-function sortArray(array) {
-  let odd = array.filter((x) => x % 2).sort((a, b) => a - b);
-  return array.map((a) => a % 2 ? odd.shift() : a);
-}
+34.) Find Grid Position (codewars.com/kata/580f6cbcfbf2bec47c000511)
 
-/* 6 kyu
-How many pages in a book?} */
-function amountOfPages(summary) {
-  let count = 0;
-  for (let i = 0; i <= summary; i++) {
-    count += i.toString().length;
-    if (count > summary) {
-      return i;
-    }
-  }
-}
+35.) Factorial length (codewars.com/kata/59f34ec5a01431ab7600005a)
 
-/* 6 kyu
-Bit Counting} */
-function countBits(n) {
-  n = n.toString(2).split("");
-  let count = 0;
-  for (let i = 0; i < n.length; i++) {
-    if (n[i] > 0) count++;
-  }
-  return count;
-}
+36.) Add All (codewars.com/kata/5b7d7ce57a0c9d86c700014b)
 
-/* 6 kyu
-Split Strings} */
-function solution (str) {
-  let isEven = str % 2 === 0 ? str : `${str}_`;
-  let res = [];
+37.) More Zeros than Ones (codewars.com/kata/5d41e16d8bad42002208fe1a)
 
-  while (isEven.length >= 2) {
-    let arr = isEven.slice(0, 2);
-    str = isEven.slice(2);
-    res.push(arr);
-    isEven = str;
-  }
-  return res;
-}
+38.) What's A Name In? (codewars.com/kata/59daf400beec9780a9000045)
 
-/* 6 kyu
-Defining getters and setters on an existing class} */
-Object.defineProperty(Person.prototype, "name", {
-  get: function () { return `${this.firstName} ${this.lastName}`; },
-  set: function (name) {
-    [this.firstName, this.lastName] = name.split(" ");
-  },
-})
+39.) Valid string (codewars.com/kata/52f3bb2095d6bfeac2002196)
 
-/* 6 kyu
-Rotate matrix counter - clockwise N - times!} */
-function rotateAgainstClockwise(m, times) {
-  times = times % 4;
-  if (times === 0) return m;
-  for (let x = 0; x < times; x++) {
-    let rotate = [];
-    for (let i = m.length - 1; i >= 0; i--) {
-      let matrix = [];
-      for (let j = 0; j < m.length; j++) {
-        matrix.push(m[j][i]);
-      }
-      rotate.push(matrix)
-    }
-    m = rotate;
-  }
-  return m
-}
+40.) Brainfuck generator (codewars.com/kata/579e646353ba33cce2000093)
 
-/* 6 kyu
-Manhattan Distance} */
-function manhattanDistance(x, y){
-  let p1 = Math.abs(x[0] - y[0])
-  let p2 = Math.abs(x[1] - y[1])
-  return Math.abs(p1 + p2)
-}
+41.) Algorithm Fun: Find The Unknown Number - Part II (codewars.com/kata/59cdb97172851e2824000094)
 
-/* 6 kyu
-Bouncing Balls} */
-function bouncingBall(h, bounce, window) {
+42.) CamelCase to underscore (codewars.com/kata/5b1956a7803388baae00003a)
 
-  res = 0;
+43.) Find character (codewars.com/kata/5817030088ca96c0b7000083)
 
-  if (h <= 0 || bounce >=1 || bounce <= 0 || window >= h) {
-    return -1;
-  }
-  while (h > window) {
-    if (h > window)
-      res++;
-    h = h * bounce;
-    if (h > window) {
-      res++;
-    }
-  }
-  return Number(res);
-}
+44.) BitMath: Addition (codewars.com/kata/57a6c52a72292d3235000187)
 
-/* 6 kyu
-Row of the odd triangle} */
-function oddRow(n) {
-  let f = 1;
-  for (let i = 1; i < n; i++) { f += i * 2; }
+45.) Making Change (codewars.com/kata/5365bb5d5d0266cd010009be)
 
-  let s = [f]
-  for (let i = 1; i < n; i++) { s.push(f += 2); }
-  return s;
-  
-}
+46.) Make A Window (codewars.com/kata/59c03f175fb13337df00002e)
 
-/* 6 kyu
-Assemble string} */
-function assembleString(arr) {
-  let res = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      if (i==0) res.push(arr[i][j])
-      if (res[j] == "*" || arr[i][j] == "#") 
-      res[j] = arr[i][j];
-    }
-  }
-  return res.map((x) => x == "*" ? "#" : x).join("");
-}
+47.) A Taste of Curry (codewars.com/kata/52d629bb5feccfd4c100022d)
 
-/* 6 kyu
-Sum of Digits / Digital Root} */
-function digital_root(n) {
-  let arr = [];
-  let reducer = (a,b) => parseInt(a) + parseInt(b);
+48.) Reducing by rules to get the result (codewars.com/kata/585ba6dff59b3cef3f000132)
 
-  while(n > 9) {
-    arr = n.toString().split("")
-    n = arr.reduce(reducer)
-  }
-  return n;
-}
+49.) Generating Generators - Generators #3 (codewars.com/kata/56390ac2815fb1222a000070)
 
-/* 6 kyu
-Array.diff} */
-function arrayDiff(a, b) {
-  return a.filter((x) => !b.includes(x))
-}
+50.) Sequence generator (codewars.com/kata/55eee789637477c94200008e)
 
-/* 6 kyu
-Stop gninnipS My sdroW!} */
-function spinWords(w){
+51.) Sort the columns of a csv-file (codewars.com/kata/57f7f71a7b992e699400013f)
 
-  return w.split(" ").map(word => (word.length >= 5) ? word.split("").reverse().join("") : word).join(" ");
+52.) Greatest Position Distance Between Matching Array Values (codewars.com/kata/5442e4fc7fc447653a0000d5)
 
-}
+53.) Filter out for good! (codewars.com/kata/56035d75426e197c3e0000a2)
 
-/* 6 kyu
-Who likes it?} */
-function likes(names) {
+54.) String Breakers (codewars.com/kata/59d398bb86a6fdf100000031)
 
-  let count = names.length;
-    if (count < 1) { return "no one likes this"}
-    else if (count === 1) { return `${names} likes this`}
-    else if (count === 2) { return `${names[0]} and ${names[1]} like this`}
-    else if (count === 3) {return `${names[0]}, ${names[1]} and ${names[2]} like this` }
-    else { return `${names[0]}, ${names[1]} and ${count - 2} others like this`}
-}
+55.) String counting (codewars.com/kata/5cfd36ea4c60c3001884ed42)
 
-/* 6 kyu
-Create Phone Number} */
-function createPhoneNumber(numbers){
-  let a = numbers.join();
-  let b = a.replace(/,/g, '')
-  return (`(${b.slice(0, 3)})` + " " + b.slice(3, 6) + "-" + b.slice(6,10)) 
-}
+56.) Consecutive Count (codewars.com/kata/59c3e819d751df54e9000098)
 
-/* 6 kyu
-Counting Duplicates} */
-function duplicateCount(text) {
-  let nText = text.toLowerCase();
-  let myObj = {};
-  let counter = 0;
-  for (let i = 0; i < nText.length; i++) {
-    if (!myObj[nText[i]]) {
-      myObj[nText[i]] = 1;
-    } else if (myObj[nText[i]] < 2) {
-      myObj[nText[i]] += 1;
-      counter++;
-    }
-  }
-  return counter;
-}
+57.) Count Repeats (codewars.com/kata/598ee7b6ec6cb90dd6000061)
+
+58.) Only Duplicates (codewars.com/kata/5a1dc4baffe75f270200006b)
+
+59.) Duplicates. Duplicates Everywhere. (codewars.com/kata/5e8dd197c122f6001a8637ca)
+
+60.) Find duplicates in array by properties keys in another array (codewars.com/kata/58cc070abd22e324b300002a)
+
+61.) Duplicate Arguments (codewars.com/kata/520d9c27e9940532eb00018e)
+
+62.) Javascript filter - 2 (codewars.com/kata/5262fa26875ed24a3e000029)
+
+63.) All Star Code Challenge #15 (codewars.com/kata/586560a639c5ab3a260000f3)
+
+64.) Odd-heavy Array (codewars.com/kata/59c7e477dcc40500f50005c7)
+
+65.) Count word occurrences (codewars.com/kata/54fdbad0762e2e8a54000452)
+
+66.) The range() function (codewars.com/kata/5298961d9ce954d77b0003a6)
+
+67.) Simple Sentences (codewars.com/kata/5297bf69649be865e6000922)
+
+68.) Simple Fun #135: Missing Alphabets (codewars.com/kata/58a664bb586e986c940001d5)
+
+69.) NASA Countdown (codewars.com/kata/56c4931400165c5283000661)
+
+70.) JSON.parse Date Reviver (codewars.com/kata/533b0d5e7abec41550000a9e)
+
+71.) Password generator (codewars.com/kata/58ade2233c9736b01d0000b3)
+
+72.) Simple time difference (codewars.com/kata/5b76a34ff71e5de9db0000f2)
+
+73.) Alphabetized (codewars.com/kata/5970df092ef474680a0000c9)
+
+74.) Decipher this! (codewars.com/kata/581e014b55f2c52bb00000f8)
+
+75.) Minutes to Midnight (codewars.com/kata/58528e9e22555d8d33000163)
+
+76.) Fun with ES6 Classes #6 - Fake Files (Basic) (codewars.com/kata/5784c8116211383b5f0001d3)
+
+77.) Time-like string format (codewars.com/kata/51e000d070fe4414000003f0)
+
+78.) Simple Fun #396: Find the Longest Substring Consisting of Unique Characters (codewars.com/kata/5bcd90808f9726d0f6000091)
+
+79.) Running Average (codewars.com/kata/589e4d646642d144a90000d8)
+
+80.) Repeated Substring (codewars.com/kata/5491689aff74b9b292000334)
+
+81.) Color Choice (codewars.com/kata/55be10de92aad5ef28000023)
+
+82.) WeIrD StRiNg CaSe (codewars.com/kata/52b757663a95b11b3d00062d)
+
+83.) Prefill an Array (codewars.com/kata/54129112fb7c188740000162)
+
+84.) Handshake problem (codewars.com/kata/5574835e3e404a0bed00001b)
+
+85.) Coding Meetup #15 - Higher-Order Functions Series - Find the odd names (codewars.com/kata/583a8bde28019d615a000035)
+
+86.) Spread number (codewars.com/kata/5cbded7a36240b000dac91eb)
+
+87.) Reverse Vowels In A String (codewars.com/kata/585db3e8eec141ce9a00008f)
+
+88.) SMS Lottery Bet Validator (codewars.com/kata/59a3e2897ac7fd05f800005f)
+
+89.) Consecutive strings (codewars.com/kata/56a5d994ac971f1ac500003e)
+
+90.) Give me a Diamond (codewars.com/kata/5503013e34137eeeaa001648)
+
+91.) Most Consecutive Zeros of a Binary Number (codewars.com/kata/59decdf40863c76ae3000080)
+
+92.) Get your steppin' on son (codewars.com/kata/55e00266d494ce5155000032)
+
+93.) IndexOf Array in Array (codewars.com/kata/5783ef69202c0ee4cb000265)
+
+94.) Framed Reflection (codewars.com/kata/581331293788bc1702001fa6)
+
+95.) Create iterator (codewars.com/kata/5c743cec901022438549964a)
+
+96.) Create a frame! (codewars.com/kata/5672f4e3404d0609ec00000a)
+
+97.) The takeWhile Function (codewars.com/kata/54f9173aa58bce9031001548)
+
+98.) Make it equal (codewars.com/kata/5736b7b749fc585e8900001f)
+
+99.) Time Math (codewars.com/kata/5aceae374d9fd1266f0000f0)
+
+100.) Write JavaScript's 'call' function using apply. (codewars.com/kata/52d56d9c6b02b2fa9a0006d9)
+
+101.) Magic Squares (codewars.com/kata/58c979aafd407d6e9f000071)
+
+102.) Unary function chainer (codewars.com/kata/54ca3e777120b56cb6000710)
+
+103.) Find Cracker. (codewars.com/kata/59f70440bee845599c000085)
+
+104.) Custom Setters and Getters (codewars.com/kata/5241060ff2471a5d7600025a)
+
+105.) Sequences and Series (codewars.com/kata/5254bd1357d59fbbe90001ec)
+
+106.) Piano Kata, Part 1 (codewars.com/kata/589273272fab865136000108)
+
+107.) Clocky Mc Clock-Face (codewars.com/kata/59752e1f064d1261cb0000ec)
+
+108.) Is Integer Array? (codewars.com/kata/52a112d9488f506ae7000b95)
+
+109.) Simple Simple Simple String Expansion (codewars.com/kata/5ae326342f8cbc72220000d2)
+
+110.) Difference of 2 (codewars.com/kata/5340298112fa30e786000688)
+
+111.) Count the photos! (codewars.com/kata/6319dba6d6e2160015a842ed)
+
+112.) Binary to Text (ASCII) Conversion (codewars.com/kata/5583d268479559400d000064)
+
+113.) Sum The Tree (codewars.com/kata/5800580f8f7ddaea13000025)
+
+114.) Smart Sum (codewars.com/kata/5831200eb812b8016d000094)
+
+115.) Are we alternate? (codewars.com/kata/59325dc15dbb44b2440000af)
+
+116.) Does array x contain all values within array y? (codewars.com/kata/5143cc9694a24abcd2000001)
+
+117.) Insert value into an array (codewars.com/kata/581dc1852d68e751180000c6)
+
+118.) Custom each() Array method (codewars.com/kata/513e7e1aee7d36073e00000d)
+
+119.) Implementing Array.prototype.groupBy method (codewars.com/kata/53c2c3e78d298dddda000460)
+
+120.) Parse a linked list from a string (codewars.com/kata/582c5382f000e535100001a7)
+
+121.) Mexican Wave (codewars.com/kata/58f5c63f1e26ecda7e000029)
+
+122.) Format words into a sentence (codewars.com/kata/51689e27fe9a00b126000004)
+
+123.) Selective Array Reversing (codewars.com/kata/58f6000bc0ec6451960000fd)
+
+124.) Getting MAD (codewars.com/kata/593a061b942a27ac940000a7)
+
+125.) Calculate number of inversions in array (codewars.com/kata/537529f42993de0e0b00181f)
+
+126.) Find matching parenthesis (codewars.com/kata/59293c2cfafd38975600002d)
+
+127.) Happy numbers (codewars.com/kata/5464cbfb1e0c08e9b3000b3e)
+
+128.) Multiples of 3 or 5 (codewars.com/kata/514b92a657cdc65150000006)
+
+129.) Highest Scoring Word (codewars.com/kata/57eb8fcdf670e99d9b000272)
+
+130.) N High Scores (codewars.com/kata/5ad0fdf461c493cc09000036)
+
+131.) Well, that's just (proto)typical! The Misadventures of Bob the Highly Paid Consultant #3 (codewars.com/kata/5877146c7aad3940f0000029)
+
+132.) Most Frequent Weekdays (codewars.com/kata/56eb16655250549e4b0013f4)
+
+133.) String character frequency (codewars.com/kata/5a1a514effe75fd63b0000f2)
+
+134.) Closures and Scopes (codewars.com/kata/526ec46d6f5e255e150002d1)
+
+135.) Determine the date by the day number (codewars.com/kata/602afedfd4a64d0008eb4e6e)
+
+136.) Valid Braces (codewars.com/kata/5277c8a221e209d3f6000b56)
+
+137.) String average (codewars.com/kata/5966847f4025872c7d00015b)
+
+138.) Find the Mine! (codewars.com/kata/528d9adf0e03778b9e00067e)
+
+139.) first character that repeats (codewars.com/kata/54f9f4d7c41722304e000bbb)
+
+140.) Clock in Mirror (codewars.com/kata/56548dad6dae7b8756000037)
+
+141.) Ordinal Numbers (codewars.com/kata/52dda52d4a88b5708f000024)
+
+142.) Adding ordinal indicator suffixes to numbers (codewars.com/kata/52dca71390c32d8fb900002b)
+
+143.) Good vs Evil (codewars.com/kata/52761ee4cffbc69732000738)
+
+144.) Roman Numerals Decoder (codewars.com/kata/51b6249c4612257ac0000005)
+
+145.) Delete occurrences of an element if it occurs more than n times (codewars.com/kata/554ca54ffa7d91b236000023)
+
+146.) Highest Rank Number in an Array (codewars.com/kata/5420fc9bb5b2c7fd57000004)
+
+147.) Fold an array (codewars.com/kata/57ea70aa5500adfe8a000110)
+
+148.) Dashatize it (codewars.com/kata/58223370aef9fc03fd000071)
+
+149.) Grouped by commas (codewars.com/kata/5274e122fc75c0943d000148)
+
+150.) Srot the inner ctonnet in dsnnieedcg oredr (codewars.com/kata/5898b4b71d298e51b600014b)
+
+151.) Lottery Ticket (codewars.com/kata/57f625992f4d53c24200070e)
+
+152.) Zero-plentiful Array (codewars.com/kata/59e270da7997cba3d3000041)
+
+153.) Title Case (codewars.com/kata/5202ef17a402dd033c000009)
+
+154.) Which are in? (codewars.com/kata/550554fd08b86f84fe000a58)
+
+155.) Help the bookseller ! (codewars.com/kata/54dc6f5a224c26032800005c)
+
+156.) Reversing a Process (codewars.com/kata/5dad6e5264e25a001918a1fc)
+
+157.) Character with longest consecutive repetition (codewars.com/kata/586d6cefbcc21eed7a001155)
+
+158.) Count the days! (codewars.com/kata/5837fd7d44ff282acd000157)
+
+159.) Find the odd int (codewars.com/kata/54da5a58ea159efa38000836)
+
+160.) ASCII hex converter (codewars.com/kata/52fea6fd158f0576b8000089)
+
+161.) Hex class (codewars.com/kata/5483366098aa442def0009af)
+
+162.) What's your running pace? (codewars.com/kata/578b8c0e84ac69a4d20004c8)
+
+163.) What century is it? (codewars.com/kata/52fb87703c1351ebd200081f)
+
+164.) New Cashier Does Not Know About Space or Shift (codewars.com/kata/5d23d89906f92a00267bb83d)
+
+165.) Maze Runner (codewars.com/kata/58663693b359c4a6560001d6)
+
+166.) Tortoise racing (codewars.com/kata/55e2adece53b4cdcb900006c)
+
+167.) Find the Nth longest string in an Array (codewars.com/kata/5594c4599934000e1e00002e)
+
+168.) Inside Out Strings (codewars.com/kata/57ebdf1c2d45a0ecd7002cd5)
+
+169.) Separating Strings (codewars.com/kata/5977ef1f945d45158d00011f)
+
+170.) Find the total white and black areas in a strange chessboard (codewars.com/kata/6262f9f7afc4729d8f5bef48)
+
+171.) Exclamation marks series #10: Remove some exclamation marks to keep the same number of exclamation marks at the beginning and end of each word (codewars.com/kata/57fb04649610ce369a0006b8)
+
+172.) A String of Sorts (codewars.com/kata/536c6b8749aa8b3c2600029a)
+
+173.) Sort Strings by Most Contiguous Vowels (codewars.com/kata/5d2d0d34bceae80027bffddb)
+
+174.) String array duplicates (codewars.com/kata/59f08f89a5e129c543000069)
+
+175.) CamelCase Method (codewars.com/kata/587731fda577b3d1b0001196)
+
+176.) Extract last names of people named Michael (codewars.com/kata/580741302e14acaef900015a)
+
+177.) Find the most frequently occurring elements in arrays (codewars.com/kata/578b44a47c77f5a1bd000011)
+
+178.) search in multidimensional array (codewars.com/kata/52840d2b27e9c932ff0016ae)
+
+179.) Update inventory in your smartphone store (codewars.com/kata/57a31ce7cf1fa5a1e1000227)
+
+180.) Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details (codewars.com/kata/583d972b8bbc0402cf000121)
+
+181.) Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse? (codewars.com/kata/58381907f8ac48ae070000de)
+
+182.) Coding Meetup #10 - Higher-Order Functions Series - Create usernames (codewars.com/kata/582a53ed261c2af9d200018c)
+
+183.) Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse? (codewars.com/kata/5829ca646d02cd1a65000284)
+
+184.) Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented? (codewars.com/kata/58291fea7ff3f640980000f9)
+
+185.) Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer (codewars.com/kata/582887f7d04efdaae3000090)
+
+186.) Permute a Palindrome (codewars.com/kata/58ae6ae22c3aaafc58000079)
+
+187.) Odd/Even number of divisors (codewars.com/kata/55830eec3e6b6c44ff000040)
+
+188.) Simple Fun #52: Pair Of Shoes (codewars.com/kata/58885a7bf06a3d466e0000e3)
+
+189.) Count the smiley faces! (codewars.com/kata/583203e6eb35d7980400002a)
+
+190.) The Deaf Rats of Hamelin (codewars.com/kata/598106cb34e205e074000031)
+
+191.) Build Tower (codewars.com/kata/576757b1df89ecf5bd00073b)
+
+192.) Split and Join (codewars.com/kata/5816ead8dae5a59eaa000053)
+
+193.) Turn String Input into Hash (codewars.com/kata/52180ce6f626d55cf8000071)
+
+194.) String tops (codewars.com/kata/59b7571bbf10a48c75000070)
+
+195.) Begin your day with a challenge, but an easy one. (codewars.com/kata/5873b2010565844b9100026d)
+
+196.) Catalog (codewars.com/kata/59d9d8cb27ee005972000045)
+
+197.) Strings, strings, strings (Hard) (codewars.com/kata/56d9439813f38853b40000e4)
+
+198.) Meeting (codewars.com/kata/59df2f8f08c6cec835000012)
+
+199.) Unknown amount of duplicates. One missing number. (codewars.com/kata/5a5cdb07fd56cbdd3c00005b)
+
+200.) Check if two words are isomorphic to each other (codewars.com/kata/59dbab4d7997cb350000007f)
+
+201.) Validate Credit Card Number (codewars.com/kata/5418a1dd6d8216e18a0012b2)
+
+202.) Who has the most money? (codewars.com/kata/528d36d7cc451cd7e4000339)
+
+203.) Mix Fruit Juice (codewars.com/kata/5905871c00881d0e85000015)
+
+204.) Fruit Machine (codewars.com/kata/590adadea658017d90000039)
+
+205.) Character counts (codewars.com/kata/56b409febccd5aafbd000021)
+
+206.) N-th Fibonacci (codewars.com/kata/522551eee9abb932420004a0)
+
+207.) Array Deep Count (codewars.com/kata/596f72bbe7cd7296d1000029)
+
+208.) A Memory game array (codewars.com/kata/55437532b73f053bac000096)
+
+209.) Selective memory (codewars.com/kata/58bee820e9f98b215200007c)
+
+210.) Special Multiples (codewars.com/kata/55e785dfcb59864f200000d9)
+
+211.) One line task: Square Every Digit (codewars.com/kata/5acd142a2ec8c48521000104)
+
+212.) "Stringing"+"Me"+"Along" (codewars.com/kata/55f4a44eb72a0fa91600001e)
+
+213.) Training Random Testcases #1: Fizz Buzz (codewars.com/kata/57980be93467db22f5000038)
+
+214.) Find the Nexus of the Codewars Universe (codewars.com/kata/5453dce502949307cf000bff)
+
+215.) Adjacent repeated words in a string (codewars.com/kata/5245a9138ca049e9a10007b8)
+
+216.) IPv4 to int32 (codewars.com/kata/52ea928a1ef5cfec800003ee)
+
+217.) Pyramid Array (codewars.com/kata/515f51d438015969f7000013)
+
+218.) Count words (codewars.com/kata/56b3b27cadd4ad275500000c)
+
+219.) Change it up (codewars.com/kata/58039f8efca342e4f0000023)
+
+220.) The Supermarket Queue (codewars.com/kata/57b06f90e298a7b53d000a86)
+
+221.) Message Validator (codewars.com/kata/5fc7d2d2682ff3000e1a3fbc)
+
+222.) Find the missing letter (codewars.com/kata/5839edaa6754d6fec10000a2)
+
+223.) Is a number prime? (codewars.com/kata/5262119038c0985a5b00029f)
+
+224.) Decode the Morse code (codewars.com/kata/54b724efac3d5402db00065e)
+
+225.) Find the unique number (codewars.com/kata/585d7d5adb20cf33cb000235)
+
+226.) Kebabize (codewars.com/kata/57f8ff867a28db569e000c4a)
+
+227.) +1 Array (codewars.com/kata/5514e5b77e6b2f38e0000ca9)
+
+228.) Lock and Key (codewars.com/kata/53c2a84a1dfa43a7e40005ba)
+
+229.) Two Sum (codewars.com/kata/52c31f8e6605bcc646000082)
+
+230.) Reverse every other word in the string (codewars.com/kata/58d76854024c72c3e20000de)
+
+231.) Sum consecutives (codewars.com/kata/55eeddff3f64c954c2000059)
+
+232.) Make the Deadfish Swim (codewars.com/kata/51e0007c1f9378fa810002a9)
+
+233.) Pair of gloves (codewars.com/kata/58235a167a8cb37e1a0000db)
+
+234.) Sums of Parts (codewars.com/kata/5ce399e0047a45001c853c2b)
+
+235.) Multiplication table (codewars.com/kata/534d2f5b5371ecf8d2000a08)
+
+236.) Backspaces in string (codewars.com/kata/5727bb0fe81185ae62000ae3)
+
+237.) Collatz (codewars.com/kata/5286b2e162056fd0cb000c20)
+
+238.) "this" is an other solution (codewars.com/kata/54834b3559e638b39d0009a2)
+
+239.) "this" is an other problem (codewars.com/kata/547f1a8d4a437abdf800055c)
+
+240.) Equal Sides Of An Array (codewars.com/kata/5679aa472b8f57fb8c000047)
+
+241.) Simple frequency sort (codewars.com/kata/5a8d2bf60025e9163c0000bc)
+
+242.) Write Number in Expanded Form - Part 2 (codewars.com/kata/58cda88814e65627c5000045)
+
+243.) Write Number in Expanded Form (codewars.com/kata/5842df8ccbd22792a4000245)
+
+244.) Take a Ten Minutes Walk (codewars.com/kata/54da539698b8a2ad76000228)
+
+245.) Persistent Bugger. (codewars.com/kata/55bf01e5a717a0d57e0000ec)
+
+246.) Detect Pangram (codewars.com/kata/545cedaa9943f7fe7b000048)
+
+247.) Does my number look big in this? (codewars.com/kata/5287e858c6b5a9678200083c)
+
+248.) Prime Primes (codewars.com/kata/57ba58d68dcd97e98c00012b)
+
+249.) Simple Substitution Cipher Helper (codewars.com/kata/52eb114b2d55f0e69800078d)
+
+250.) Are they the "same"? (codewars.com/kata/550498447451fbbd7600041c)
+
+251.) Convert string to camel case (codewars.com/kata/517abf86da9663f1d2000003)
+
+252.) Length of missing array (codewars.com/kata/57b6f5aadb5b3d0ae3000611)
+
+253.) Run-length encoding (codewars.com/kata/546dba39fa8da224e8000467)
+
+254.) Playing with digits (codewars.com/kata/5552101f47fc5178b1000050)
+*/

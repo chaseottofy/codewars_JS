@@ -1,5 +1,52 @@
-/* 4 kyu
-Longest Palindromic Substring (Linear)} */
+/*
+4kyu
+1.) Longest Palindromic Substring (Linear) (codewars.com/kata/5dcde0b9fcb0d100349cb5c0)
+
+2.) The observed PIN (codewars.com/kata/5263c6999e0f40dee200059d)
+
+3.) Next smaller number with the same digits (codewars.com/kata/5659c6d896bc135c4c00021e)
+
+4.) Strings Mix (codewars.com/kata/5629db57620258aa9d000014)
+
+5.) Sum Strings as Numbers (codewars.com/kata/5324945e2ece5e1f32000370)
+
+6.) Name Your Space (codewars.com/kata/514b6c44a337752e67000077)
+
+7.) Making Change: Part 2 (codewars.com/kata/5365c93f8d004c94c90002e7)
+
+8.) Advanced Events (codewars.com/kata/52d4678038644497e900007c)
+
+9.) Connect Four: Who Won? (codewars.com/kata/529962509ce9545c76000afa)
+
+10.) parseInt() reloaded (codewars.com/kata/525c7c5ab6aecef16e0001a5)
+
+11.) Counting Change Combinations (codewars.com/kata/541af676b589989aed0009e7)
+
+12.) Most frequently used words in a text (codewars.com/kata/51e056fe544cf36c410000fb)
+
+13.) Roman Numerals Helper (codewars.com/kata/51b66044bce5799a7f000003)
+
+14.) Strip Comments (codewars.com/kata/51c8e37cee245da6b40000bd)
+
+15.) So Many Permutations! (codewars.com/kata/5254ca2719453dcc0b00027d)
+
+16.) Human readable duration format (codewars.com/kata/52742f58faf5485cae000b9a)
+
+17.) Next bigger number with the same digits (codewars.com/kata/55983863da40caa2c900004e)
+
+18.) Recover a secret string from random triplets (codewars.com/kata/53f40dff5f9d31b813000774)
+
+19.) Range Extraction (codewars.com/kata/51ba717bb08c1cd60f00002f)
+
+20.) Snail (codewars.com/kata/521c2db8ddc89b9b7a0000c1)
+
+*/
+
+/*****************************
+1.) Longest Palindromic Substring (Linear)
+solved: 7/11/2023
+codewars.com/kata/5dcde0b9fcb0d100349cb5c0
+*****************************/
 function expandAroundCenter(s, left, right) {
   let size = s.length;
   while (left >= 0 && right < size && s[left] === s[right]) {
@@ -40,8 +87,11 @@ function longest_palindrome(s) {
 }
 
 
-/* 4 kyu
-The observed PIN} */
+/*****************************
+2.) The observed PIN
+solved: 7/10/2023
+codewars.com/kata/5263c6999e0f40dee200059d
+*****************************/
 const keypad = {
   '1': ['1', '2', '4'],
   '2': ['1', '2', '3', '5'],
@@ -71,8 +121,11 @@ function getPINs(obs) {
   return obs.length === 1 ? keypad[obs] : permutePins('', 0);
 }
 
-/* 4 kyu
-Next smaller number with the same digits} */
+/*****************************
+3.) Next smaller number with the same digits
+solved: 7/6/2023
+codewars.com/kata/5659c6d896bc135c4c00021e
+*****************************/
 function nextSmaller(n) {
   if (n < 10) return -1;
   if (n < 100) {
@@ -106,8 +159,11 @@ function nextSmaller(n) {
   return res[0] === 0 || res.join("") > n ? -1 : +res.join("");
 }
 
-/* 4 kyu
-Strings Mix} */
+/*****************************
+4.) Strings Mix
+solved: 7/6/2023
+codewars.com/kata/5629db57620258aa9d000014
+*****************************/
 function mix(s1, s2) {
   let m = {};
   let m2 = {};
@@ -157,8 +213,11 @@ function mix(s1, s2) {
   return res.slice(0, -1);
 }
 
-/* 4 kyu
-Sum Strings as Numbers} */
+/*****************************
+5.) Sum Strings as Numbers
+solved: 7/6/2023
+codewars.com/kata/5324945e2ece5e1f32000370
+*****************************/
 function sumStrings(a, b) {
   let sum = "";
   let carry = 0;
@@ -179,8 +238,11 @@ function sumStrings(a, b) {
   return sum[0] === '0' ? sum.slice(1) : sum;
 }
 
-/* 4 kyu
-Name Your Space} */
+/*****************************
+6.) Name Your Space
+solved: 7/6/2023
+codewars.com/kata/514b6c44a337752e67000077
+*****************************/
 function namespace(root, path, value) {
   const keys = path.split('.');
   let current = root;
@@ -206,8 +268,11 @@ function namespace(root, path, value) {
   }
 }
 
-/* 4 kyu
-Making Change: Part 2} */
+/*****************************
+7.) Making Change: Part 2
+solved: 7/4/2023
+codewars.com/kata/5365c93f8d004c94c90002e7
+*****************************/
 class Currency {
   constructor(den) {this.den = den;}
   numWays(amount) {
@@ -233,8 +298,11 @@ class Currency {
   }
 }
 
-/* 4 kyu
-Advanced Events} */
+/*****************************
+8.) Advanced Events
+solved: 7/4/2023
+codewars.com/kata/52d4678038644497e900007c
+*****************************/
 function Event() {
   let handlers = [];
 
@@ -263,8 +331,11 @@ function Event() {
   };
 }
 
-/* 4 kyu
-Connect Four: Who Won?} */
+/*****************************
+9.) Connect Four: Who Won?
+solved: 7/2/2023
+codewars.com/kata/529962509ce9545c76000afa
+*****************************/
 const scanLine = (arr) => {
   let [winner, stillPlayable] = [null, false];
   let [countMove, countEmpty] = [0, 0];
@@ -353,8 +424,11 @@ function connectFour(board) {
 }
 
 
-/* 4 kyu
-parseInt() reloaded} */
+/*****************************
+10.) parseInt() reloaded
+solved: 2/21/2023
+codewars.com/kata/525c7c5ab6aecef16e0001a5
+*****************************/
 function parseInt(string) {
   // condense the object below into one line
   const numbers = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17, "eighteen": 18, "nineteen": 19, "twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60, "seventy": 70, "eighty": 80, "ninety": 90, "hundred": 100, "thousand": 1000, "million": 1000000};
@@ -392,8 +466,11 @@ function parseInt(string) {
   return number + current;
 }
 
-/* 4 kyu
-Counting Change Combinations} */
+/*****************************
+11.) Counting Change Combinations
+solved: 2/20/2023
+codewars.com/kata/541af676b589989aed0009e7
+*****************************/
 function countChange(money, coins) {
   if (money === 0) { return 1; }
   if (money < 0) { return 0; }
@@ -401,8 +478,11 @@ function countChange(money, coins) {
   return countChange(money - coins[0], coins) + countChange(money, coins.slice(1));
 }
 
-/* 4 kyu
-Most frequently used words in a text} */
+/*****************************
+12.) Most frequently used words in a text
+solved: 2/19/2023
+codewars.com/kata/51e056fe544cf36c410000fb
+*****************************/
 function topThreeWords(text, wordCount = {}) {
   text.toLowerCase().split(/[^a-z']/).forEach(word => {
     if (word.length > 0 && word.toLowerCase() !== word.toUpperCase()) {
@@ -413,8 +493,11 @@ function topThreeWords(text, wordCount = {}) {
   return Object.keys(wordCount).sort((a,b) => wordCount[b] - wordCount[a]).slice(0, 3);
 }
 
-/* 4 kyu
-Roman Numerals Helper} */
+/*****************************
+13.) Roman Numerals Helper
+solved: 9/28/2022
+codewars.com/kata/51b66044bce5799a7f000003
+*****************************/
 let key = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
 let val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 const RomanNumerals = {
@@ -442,8 +525,11 @@ const RomanNumerals = {
   }
 }
 
-/* 4 kyu
-Strip Comments} */
+/*****************************
+14.) Strip Comments
+solved: 8/30/2022
+codewars.com/kata/51c8e37cee245da6b40000bd
+*****************************/
 function solution(input, markers) {
 
   let flag = false
@@ -475,8 +561,11 @@ function solution(input, markers) {
 
 };
 
-/* 4 kyu
-So Many Permutations!} */
+/*****************************
+15.) So Many Permutations!
+solved: 8/8/2022
+codewars.com/kata/5254ca2719453dcc0b00027d
+*****************************/
 function permutations(string) {
   if (string.length === 1) {return [...string]}
   if (string.length < 2) { return string }
@@ -491,8 +580,11 @@ function permutations(string) {
 }
 
 
-/* 4 kyu
-Human readable duration format} */
+/*****************************
+16.) Human readable duration format
+solved: 8/5/2022
+codewars.com/kata/52742f58faf5485cae000b9a
+*****************************/
 function formatDuration (time) {
   if (!time) { return "now"; }
 
@@ -537,8 +629,11 @@ function formatDuration (time) {
   return res
 }
 
-/* 4 kyu
-Next bigger number with the same digits} */
+/*****************************
+17.) Next bigger number with the same digits
+solved: 8/4/2022
+codewars.com/kata/55983863da40caa2c900004e
+*****************************/
 function nextBigger(num) {
   let arr = num.toString().split('').map(n => parseInt(n));
   let last = null;
@@ -563,8 +658,11 @@ function nextBigger(num) {
   return +arr.slice(0, last + 1).concat(...arr.slice(last + 1).sort()).join("")
 }
 
-/* 4 kyu
-Recover a secret string from random triplets} */
+/*****************************
+18.) Recover a secret string from random triplets
+solved: 7/23/2022
+codewars.com/kata/53f40dff5f9d31b813000774
+*****************************/
 var recoverSecret = function(triplets) {
   let curr = Array.from(new Set(triplets.join(""))).join("").replace(",", "")
 
@@ -583,8 +681,11 @@ var recoverSecret = function(triplets) {
   return curr
 }
 
-/* 4 kyu
-Range Extraction} */
+/*****************************
+19.) Range Extraction
+solved: 5/29/2022
+codewars.com/kata/51ba717bb08c1cd60f00002f
+*****************************/
 function solution(list) {
   let res = ''
   let group = false
@@ -604,8 +705,11 @@ function solution(list) {
   return res.slice(0, -1)
 }
 
-/* 4 kyu
-Snail} */
+/*****************************
+20.) Snail
+solved: 2/28/2022
+codewars.com/kata/521c2db8ddc89b9b7a0000c1
+*****************************/
 snail = function(array) {
   if (array.length < 2) { return array[0] || []}
   else {

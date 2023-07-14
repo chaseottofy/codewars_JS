@@ -1,5 +1,22 @@
-/* 3 kyu
-Help the general decode secret enemy messages.} */
+/*
+3kyu
+
+1.) Help the general decode secret enemy messages. (codewars.com/kata/52cf02cd825aef67070008fa)
+
+2.) Make a spiral (codewars.com/kata/534e01fbbb17187c7e0000c6)
+
+3.) How many are smaller than me II? (codewars.com/kata/56a1c63f3bc6827e13000006)
+
+4.) Alphabetic Anagrams (codewars.com/kata/53e57dada0cb0400ba000688)
+
+5.) The soul of wit: reverse an array (codewars.com/kata/59b81886460387d8fc000043)
+*/
+
+/*****************************
+1.) Help the general decode secret enemy messages.
+solved: 7/7/2023
+codewars.com/kata/52cf02cd825aef67070008fa
+*****************************/
 const charToNum = {
   'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8,
   'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16,
@@ -40,8 +57,11 @@ device.decode = function(str) {
 }
 
 
-/* 3 kyu
-Make a spiral} */
+/*****************************
+2.) Make a spiral
+solved: 7/4/2023
+codewars.com/kata/534e01fbbb17187c7e0000c6
+*****************************/
 function spiralize(n) {
   const spiral = Array.from({ length: n }, () => Array.from({ length: n }, () => 0));
   let [row, col] = [2, 1];
@@ -126,8 +146,11 @@ function spiralize(n) {
   return spiral;
 };
 
-/* 3 kyu
-How many are smaller than me II?} */
+/*****************************
+3.) How many are smaller than me II?
+solved: 3/27/2023
+codewars.com/kata/56a1c63f3bc6827e13000006
+*****************************/
 function smaller(nums) {
   const result = new Array(nums.length).fill(0);
   const indexedNums = nums.map((num, index) => [num, index]);
@@ -171,8 +194,11 @@ function smaller(nums) {
   return result;
 }
 
-/* 3 kyu
-Alphabetic Anagrams} */
+/*****************************
+4.) Alphabetic Anagrams
+solved: 8/29/2022
+codewars.com/kata/53e57dada0cb0400ba000688
+*****************************/
 function listPosition(s) {
   const a = s.split("")
   let total = 1
@@ -198,6 +224,9 @@ function listPosition(s) {
 }
 
 
-/* 3 kyu
-The soul of wit: reverse an array} */
+/*****************************
+5.) The soul of wit: reverse an array
+solved: 8/1/2022
+codewars.com/kata/59b81886460387d8fc000043
+*****************************/
 reverse=a=>[...a].map(a.pop,a)
